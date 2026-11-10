@@ -1,0 +1,51 @@
+name: Validate site and Pages build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site and Cloudflare Pages output
+        run: npm run build
+
+      - name: SEO audit
+        run: node scripts/seo-audit.mjs
+
+      - name: Claims and agent access audit
+        run: node scripts/claims-audit.mjs
+
+      - name: Backend, service-worker and Pages function tests
+        run: node --test tests/backend.test.js tests/tool-execution.test.js tests/og-preview.test.js tests/pages-functions.test.js tests/service-worker.test.js
+
+      - name: PWA manifest and HTTP contract checks
+        run: |
+          NODE_ENV=production HOST=127.0.0.1 PORT=3002 DATABASE_PATH=:memory: LOG_LEVEL=error node server.js &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID 2>/dev/null || true' EXIT
+          sleep 2
+          node scripts/qa-pwa.mjs http://127.0.0.1:3002
+
+      - name: Install Chromium for PWA browser tests
+        run: npx playwright install --with-deps chromium
+
+      - name: PWA install and offline browser tests
+        run: node scripts/qa-pwa-browser.mjs
+
+      - name: Dependency audit
+        run: npm audit --omit=dev

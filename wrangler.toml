@@ -1,0 +1,19 @@
+name = "100toolcrate"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Optional durable usage counters.
+# 1. Create a D1 database: npx wrangler d1 create 100toolcrate-usage
+# 2. Apply migrations/d1/0001_tool_usage.sql
+# 3. Uncomment below and set database_id, or bind DB in the Pages dashboard.
+# If both wrangler.toml and dashboard bindings are used, keep them consistent.
+#
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "100toolcrate-usage"
+# database_id = "YOUR_D1_DATABASE_ID"
+
+# Build-time canonical origin override for alternate domains:
+# Set PUBLIC_SITE_URL in Cloudflare Pages environment variables instead of
+# hard-coding a preview URL here. Default production origin is https://100toolcrate.com.

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='43' y='10' width='14' height='40' rx='2' fill='%2306b6d4'/><polygon points='50,95 5,70 5,35 50,60' fill='%230a2a5e'/><polygon points='50,95 95,70 95,35 50,60' fill='%230a2a5e'/></svg>">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+<link rel="api-catalog" href="/.well-known/api-catalog">
+<link rel="service-doc" href="/docs/api">
+<meta name="theme-color" content="#0B0E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="100ToolCrate">
+<meta name="msvalidate.01" content="ABE9D58FD670A809B29645CC7CCA575E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=2026-11-10-v88-agent-growth">
+<script>window.TC_ADSENSE_CLIENT="ca-pub-5986395187107423";</script>
+<script src="/assets/js/monetization.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/theme.js?v=2026-11-10-v88-agent-growth"></script>
+<script src="/assets/js/pwa.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/webmcp.js?v=2026-11-10-v88-agent-growth" defer></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6aa3328b8b2c4002bbcc18d0f5215960"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <title>About Us - 100ToolCrate</title>
+  <meta name="description" content="About Us from 100ToolCrate: practical browser tools, transparent limitations and privacy-first defaults.">
+  <meta property="og:title" content="About Us">
+  <meta property="og:description" content="About Us from 100ToolCrate: practical browser tools, transparent limitations and privacy-first defaults.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://100toolcrate.com/about">
+
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="site-nav" aria-label="Primary">
+  <div class="nav-wrapper">
+    <div class="nav-brand-group">
+      <a href="/" class="logo-text">
+        100ToolCrate
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-controls="nav-categories-menu" id="nav-categories-btn">
+          Categories <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content" id="nav-categories-menu" role="group" aria-labelledby="nav-categories-btn">
+          <a href="/tools?cat=image">Image Tools</a>
+          <a href="/tools?cat=dev">Dev Tools</a>
+          <a href="/tools?cat=pdf">PDF Utilities</a>
+          <a href="/tools?cat=text">Text Tools</a>
+          <a href="/tools?cat=calc">Calculators</a>
+          <a href="/tools?cat=productivity">Productivity</a>
+          <a href="/tools?cat=qr">QR Tools</a>
+          <a href="/tools?cat=seo">SEO Tools</a>
+          <a href="/tools?cat=personality">Personality Tests</a>
+        </div>
+      </div>
+      <a href="/workflows">Workflows</a>
+      <a href="/services">Services</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+        <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+      </button>
+      <button class="menu-toggle" aria-label="Open sidebar navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-label="Site navigation sidebar" inert>
+  <div class="sidebar-header">
+    <a href="/" class="logo-text" style="font-size: 1.15rem;">100ToolCrate</a>
+    <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+      <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+    </button>
+  </div>
+  <div class="sidebar-content">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <div class="sidebar-section-title">Navigation</div>
+      <a href="/" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">home</span>
+        Home
+      </a>
+      <a href="/tools" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+        Popular
+      </a>
+      <a href="/workflows" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">checklist</span>
+        Workflows
+      </a>
+      <a href="/blog" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+        Blog
+      </a>
+      <a href="/about" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">info</span>
+        About
+      </a>
+      <a href="/contact" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+        Contact
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section-title">Categories</div>
+
+      <a href="/tools" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F8FAFC;flex-shrink:0;"></span>
+        All Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">122</span>
+      </a>
+      <a href="/tools?cat=image" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#60A5FA;flex-shrink:0;"></span>
+        Image Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">23</span>
+      </a>
+      <a href="/tools?cat=dev" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#06B6D4;flex-shrink:0;"></span>
+        Dev Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">25</span>
+      </a>
+      <a href="/tools?cat=pdf" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB7185;flex-shrink:0;"></span>
+        PDF Utilities
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=text" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#EAB308;flex-shrink:0;"></span>
+        Text Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=calc" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0;"></span>
+        Calculators
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">13</span>
+      </a>
+      <a href="/tools?cat=productivity" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB923C;flex-shrink:0;"></span>
+        Productivity
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">3</span>
+      </a>
+      <a href="/tools?cat=qr" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#818CF8;flex-shrink:0;"></span>
+        QR Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">9</span>
+      </a>
+      <a href="/tools?cat=seo" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;"></span>
+        SEO Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">7</span>
+      </a>
+      <a href="/tools?cat=personality" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F472B6;flex-shrink:0;"></span>
+        Personality Tests
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">2</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="/privacy-policy" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">policy</span>
+        Privacy Policy
+      </a>
+      <a href="/terms" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">gavel</span>
+        Terms of Service
+      </a>
+      <a href="/disclaimer" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+        Disclaimer
+      </a>
+    </nav>
+  </div>
+</aside>
+
+  <main class="main-content" id="main-content" tabindex="-1">
+    <div class="tool-page-container" style="padding-top: 2rem; padding-bottom: 3.5rem;">
+      <div style="margin-bottom: 1.25rem;">
+        <a id="nav-back-btn" class="nav-back-btn" href="/" aria-label="Go back to parent page" style="display: none;">
+          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+          <span class="back-text">Back</span>
+        </a>
+      </div>
+      <h1 style="font-size: 2.25rem; font-weight: 900; margin-bottom: 1.75rem; color: var(--text-color); letter-spacing: -0.02em;">About Us</h1>
+      <div style="color: var(--text-muted); line-height: 1.75;">
+
+<div class="static-page-content" style="max-width: 900px; margin: 0 auto;">
+  <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-color); margin-bottom: 2rem;">
+    Welcome to <strong>100ToolCrate</strong> — a modern, privacy-focused digital suite of over 100 web utilities engineered specifically for developers, designers, writers, marketers, and digital creators worldwide.
+  </p>
+
+  <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-color); margin-top: 2rem; margin-bottom: 1rem;">Our Mission: Privacy-First Digital Tools</h2>
+  <p style="margin-bottom: 1.25rem; color: var(--text-muted); line-height: 1.75;">
+    100ToolCrate provides local-first browser utilities for tasks such as image compression, JSON formatting, calculations and PDF assembly. Supported browser tools avoid sending selected files to our server. A separate, clearly documented execution API handles selected text/data requests transiently, while forms and paid-service transfers use third-party or agreed delivery channels.
+  </p>
+
+  <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-color); margin-top: 2rem; margin-bottom: 1rem;">How Our Client-Side Architecture Works</h2>
+  <p style="margin-bottom: 1.25rem; color: var(--text-muted); line-height: 1.75;">
+    Browser tools use the technologies each task needs, such as File APIs, Canvas, Web Crypto, JavaScript and client-side document libraries. A separate public execution API handles selected text, JSON and calculation inputs transiently on the server. When you drag and drop an image or paste confidential code into 100ToolCrate:
+  </p>
+  <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-muted); line-height: 1.8;">
+    <li style="margin-bottom: 0.5rem;"><strong>Zero Server Uploads:</strong> Supported browser-tool files remain on your device; API and form submissions follow different data paths described in our editorial policy.</li>
+    <li style="margin-bottom: 0.5rem;"><strong>Instant Computation:</strong> Processing occurs locally using your device's hardware, eliminating internet latency and bandwidth limits.</li>
+    <li style="margin-bottom: 0.5rem;"><strong>Complete Confidentiality:</strong> No server logs, no stored copies, and no risk of third-party data breaches.</li>
+  </ul>
+
+  <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-color); margin-top: 2rem; margin-bottom: 1rem;">Comprehensive Tool Suite</h2>
+  <p style="margin-bottom: 1.25rem; color: var(--text-muted); line-height: 1.75;">
+    Our platform offers 9 distinct utility categories designed to cover every technical need:
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 2.25rem;">
+    <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: 0.75rem;">
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin-bottom: 0.5rem;">📸 Image Utilities</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Compress, crop, resize, convert formats (PNG, JPG, WebP), and remove EXIF metadata locally.</p>
+    </div>
+    <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: 0.75rem;">
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin-bottom: 0.5rem;">⚡ Developer Tools</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Format JSON/XML/SQL, encode/decode Base64, generate JWT tokens, minify code, and test regex patterns.</p>
+    </div>
+    <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: 0.75rem;">
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin-bottom: 0.5rem;">📄 PDF Tools</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Merge, split, protect, compress, and convert PDF documents in high-fidelity sandbox isolates.</p>
+    </div>
+    <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: 0.75rem;">
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin-bottom: 0.5rem;">📝 Text & Content</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Word counts, diff checker, case converters, readability scores, text-to-speech, and lorem ipsum generators.</p>
+    </div>
+    <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: 0.75rem;">
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin-bottom: 0.5rem;">⏱️ Productivity</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Pomodoro focus sessions, typing speed tests, and an autosaving browser notepad.</p>
+    </div>
+  </div>
+
+  <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-color); margin-top: 2rem; margin-bottom: 1rem;">Our Core Operating Principles</h2>
+  <ol style="padding-left: 1.5rem; margin-bottom: 2rem; color: var(--text-muted); line-height: 1.8;">
+    <li style="margin-bottom: 0.5rem;"><strong>Free core tools:</strong> Browser utilities do not require an account or subscription. Practical device, browser and file-format limits still apply.</li>
+    <li style="margin-bottom: 0.5rem;"><strong>No tool account required:</strong> Start work without registering an email address. Paid service inquiries are handled separately.</li>
+    <li style="margin-bottom: 0.5rem;"><strong>Transparent data paths:</strong> Local browser processing, transient server execution, forms and paid-service transfers are distinguished in our <a href="/editorial-policy" style="color: var(--primary);">editorial policy</a>. Local processing reduces uploads but is not a promise of complete isolation.</li>
+  </ol>
+
+  <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-color); margin-top: 2rem; margin-bottom: 1rem;">Get In Touch</h2>
+  <p style="margin-bottom: 1.25rem; color: var(--text-muted); line-height: 1.75;">
+    We review bug reports and update tools when issues are reproduced or requirements change. For feature requests, corrections or security reports, use our <a href="/contact" style="color: var(--primary); font-weight: 600;">Contact Page</a> or email <a href="mailto:support@100toolcrate.com" style="color: var(--primary); font-weight: 600;">support@100toolcrate.com</a>.
+  </p>
+</div>
+
+      </div>
+    </div>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-features-row">
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #8B5CF6;">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <div class="feature-title">Free Core Tools</div>
+        <div class="feature-sub">No fee for core tool use.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #06B6D4;">
+          <span class="material-symbols-outlined">shield_lock</span>
+        </div>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-sub">Files stay on your device.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #F43F5E;">
+          <span class="material-symbols-outlined">no_accounts</span>
+        </div>
+        <div class="feature-title">No Registration</div>
+        <div class="feature-sub">Start using instantly.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #EAB308;">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <div class="feature-title">Lightning Fast</div>
+        <div class="feature-sub">Client-side processing.</div>
+      </div>
+    </div>
+
+    <div class="footer-line-divider"></div>
+
+    <div class="footer-main-row">
+      <div class="footer-brand-side">
+        <h3 class="footer-brand-name">100ToolCrate</h3>
+        <p class="footer-brand-desc">
+          Precision built utilities for the modern web.<br>
+          Free core tools. Local-first processing.
+        </p>
+        <div class="footer-brand-copyright">
+          © 2026 100ToolCrate.
+        </div>
+      </div>
+
+      <div class="footer-columns-side">
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">NAVIGATION</span>
+          <a href="/">Home</a>
+          <a href="/tools">All Tools</a>
+          <a href="/workflows">Workflows</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/advertise">Advertise</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">FOR BUILDERS</span>
+          <a href="/agents">AI agent API & MCP</a>
+          <a href="/services">Done-for-you services</a>
+          <a href="/advertise">Sponsorships</a>
+          <a href="/editorial-policy">Editorial policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">PLATFORM</span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <button type="button" class="pwa-install-link" data-ad-choices>
+            <span class="material-symbols-outlined" aria-hidden="true">ad_group</span>
+            Ad choices
+          </button>
+          <button type="button" class="pwa-install-link" data-pwa-install>
+            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+            Install app
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js?v=2026-11-10-v88-agent-growth" defer></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='43' y='10' width='14' height='40' rx='2' fill='%2306b6d4'/><polygon points='50,95 5,70 5,35 50,60' fill='%230a2a5e'/><polygon points='50,95 95,70 95,35 50,60' fill='%230a2a5e'/></svg>">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+<link rel="api-catalog" href="/.well-known/api-catalog">
+<link rel="service-doc" href="/docs/api">
+<meta name="theme-color" content="#0B0E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="100ToolCrate">
+<meta name="msvalidate.01" content="ABE9D58FD670A809B29645CC7CCA575E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=2026-11-10-v88-agent-growth">
+<script>window.TC_ADSENSE_CLIENT="ca-pub-5986395187107423";</script>
+<script src="/assets/js/monetization.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/theme.js?v=2026-11-10-v88-agent-growth"></script>
+<script src="/assets/js/pwa.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/webmcp.js?v=2026-11-10-v88-agent-growth" defer></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6aa3328b8b2c4002bbcc18d0f5215960"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <title>AI Agent Tools API &amp; MCP Server | 100ToolCrate</title>
+  <meta name="description" content="Discover and execute 18 real text, JSON, time and calculation tools through REST or MCP. Includes schemas, live playground, limits and data handling.">
+  <meta property="og:title" content="AI Agent Tools API &amp; MCP Server | 100ToolCrate">
+  <meta property="og:description" content="Discover and execute 18 real text, JSON, time and calculation tools through REST or MCP. Includes schemas, live playground, limits and data handling.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://100toolcrate.com/agents">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"100ToolCrate Public Tool API","description":"Deterministic public text, JSON, time and calculator execution tools.","documentation":"https://100toolcrate.com/agents","endpointDescription":"https://100toolcrate.com/api/openapi.json","termsOfService":"https://100toolcrate.com/terms","provider":{"@type":"Organization","name":"100ToolCrate","url":"https://100toolcrate.com/"}}</script>
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="site-nav" aria-label="Primary">
+  <div class="nav-wrapper">
+    <div class="nav-brand-group">
+      <a href="/" class="logo-text">
+        100ToolCrate
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-controls="nav-categories-menu" id="nav-categories-btn">
+          Categories <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content" id="nav-categories-menu" role="group" aria-labelledby="nav-categories-btn">
+          <a href="/tools?cat=image">Image Tools</a>
+          <a href="/tools?cat=dev">Dev Tools</a>
+          <a href="/tools?cat=pdf">PDF Utilities</a>
+          <a href="/tools?cat=text">Text Tools</a>
+          <a href="/tools?cat=calc">Calculators</a>
+          <a href="/tools?cat=productivity">Productivity</a>
+          <a href="/tools?cat=qr">QR Tools</a>
+          <a href="/tools?cat=seo">SEO Tools</a>
+          <a href="/tools?cat=personality">Personality Tests</a>
+        </div>
+      </div>
+      <a href="/workflows">Workflows</a>
+      <a href="/services">Services</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+        <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+      </button>
+      <button class="menu-toggle" aria-label="Open sidebar navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-label="Site navigation sidebar" inert>
+  <div class="sidebar-header">
+    <a href="/" class="logo-text" style="font-size: 1.15rem;">100ToolCrate</a>
+    <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+      <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+    </button>
+  </div>
+  <div class="sidebar-content">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <div class="sidebar-section-title">Navigation</div>
+      <a href="/" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">home</span>
+        Home
+      </a>
+      <a href="/tools" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+        Popular
+      </a>
+      <a href="/workflows" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">checklist</span>
+        Workflows
+      </a>
+      <a href="/blog" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+        Blog
+      </a>
+      <a href="/about" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">info</span>
+        About
+      </a>
+      <a href="/contact" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+        Contact
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section-title">Categories</div>
+
+      <a href="/tools" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F8FAFC;flex-shrink:0;"></span>
+        All Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">122</span>
+      </a>
+      <a href="/tools?cat=image" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#60A5FA;flex-shrink:0;"></span>
+        Image Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">23</span>
+      </a>
+      <a href="/tools?cat=dev" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#06B6D4;flex-shrink:0;"></span>
+        Dev Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">25</span>
+      </a>
+      <a href="/tools?cat=pdf" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB7185;flex-shrink:0;"></span>
+        PDF Utilities
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=text" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#EAB308;flex-shrink:0;"></span>
+        Text Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=calc" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0;"></span>
+        Calculators
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">13</span>
+      </a>
+      <a href="/tools?cat=productivity" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB923C;flex-shrink:0;"></span>
+        Productivity
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">3</span>
+      </a>
+      <a href="/tools?cat=qr" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#818CF8;flex-shrink:0;"></span>
+        QR Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">9</span>
+      </a>
+      <a href="/tools?cat=seo" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;"></span>
+        SEO Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">7</span>
+      </a>
+      <a href="/tools?cat=personality" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F472B6;flex-shrink:0;"></span>
+        Personality Tests
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">2</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="/privacy-policy" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">policy</span>
+        Privacy Policy
+      </a>
+      <a href="/terms" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">gavel</span>
+        Terms of Service
+      </a>
+      <a href="/disclaimer" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+        Disclaimer
+      </a>
+    </nav>
+  </div>
+</aside>
+
+  <main class="main-content" id="main-content" tabindex="-1">
+    <div class="tool-page-container" style="padding-top: 2rem; padding-bottom: 3.5rem;">
+      <div style="margin-bottom: 1.25rem;">
+        <a id="nav-back-btn" class="nav-back-btn" href="/" aria-label="Go back to parent page" style="display: none;">
+          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+          <span class="back-text">Back</span>
+        </a>
+      </div>
+      <h1 style="font-size: 2.25rem; font-weight: 900; margin-bottom: 1.75rem; color: var(--text-color); letter-spacing: -0.02em;">For AI Agents &amp; Developers</h1>
+      <div style="color: var(--text-muted); line-height: 1.75;">
+
+<div class="static-page-content" style="max-width: 1050px; margin: 0 auto;">
+  <section class="workflow-hero">
+    <div><span class="workflow-eyebrow">REST + Model Context Protocol</span><h2 style="font-size: clamp(1.8rem,4vw,3rem); line-height: 1.1; margin: .6rem 0; color: var(--text-color);">Discoverable tools that agents can actually execute.</h2><p>18 deterministic text, JSON, time and calculation tools are available through a real server API. The other 104 file, canvas, camera and document tools remain browser-only because they need local user input and browser APIs.</p></div>
+    <div class="workflow-hero-meta"><div class="workflow-meta-item"><small>Discovery</small><strong>GET /api/v1/tools</strong></div><div class="workflow-meta-item"><small>MCP endpoint</small><strong>POST /api/mcp · 2025-06-18</strong></div></div>
+  </section>
+  <div class="workflow-two-col">
+    <section class="workflow-info-card"><h2>REST quick start</h2><p>List executable tools and their schemas:</p><pre class="agent-code">curl https://100toolcrate.com/api/v1/tools</pre><p>Format JSON with a real execution call:</p><pre class="agent-code">curl -X POST https://100toolcrate.com/api/v1/tools/json-formatter/execute \
+  -H 'Content-Type: application/json' \
+  -d '{"json":"{\"ok\":true}","indent":2}'</pre></section>
+    <section class="workflow-info-card"><h2>MCP quick start</h2><p>Connect a client to <code>https://100toolcrate.com/api/mcp</code>. The server supports initialize, ping, tools/list and tools/call over Streamable HTTP JSON responses.</p><pre class="agent-code">{"jsonrpc":"2.0","id":1,"method":"tools/call",
+ "params":{"name":"word-counter",
+ "arguments":{"text":"one two three"}}}</pre><p><a href="/.well-known/mcp/server-card.json" style="color:var(--primary);">Machine-readable server card</a> · <a href="/api/openapi.json" style="color:var(--primary);">OpenAPI specification</a></p></section>
+  </div>
+  <section class="workflow-info-card" style="margin: 1.5rem 0;"><h2>Data handling and limits</h2><p>Execution inputs and outputs are processed transiently and are not persisted by the execution endpoint. Do not send secrets, personal data, access tokens or regulated datasets. Requests are limited to 16 KB, results to 256 KB, and calls are rate limited. This is different from free browser tools, where supported file processing stays on your device, and from paid services, where files are transferred only through an agreed channel.</p></section>
+  <section data-agent-playground aria-labelledby="agent-playground-title">
+    <div class="section-header"><h2 id="agent-playground-title">Live API playground</h2><span class="workflow-save-status" id="agent-tool-status" role="status">Loading the real tool catalog…</span></div>
+    <div class="workflow-two-col">
+      <div class="workflow-info-card"><label style="display:grid;gap:.5rem;color:var(--text-color);font-weight:700;">Executable tool<select id="agent-tool-select" class="workflow-search" style="width:100%;"></select></label><p id="agent-tool-description" style="margin-top:1rem;"></p><label style="display:grid;gap:.5rem;color:var(--text-color);font-weight:700;">JSON arguments<textarea id="agent-tool-input" class="agent-input" rows="12" spellcheck="false">{}</textarea></label><button id="agent-tool-execute" type="button" class="workflow-primary-link" style="border:0;cursor:pointer;margin-top:1rem;">Execute on server</button></div>
+      <div class="workflow-info-card"><h3 style="margin-top:0;">Response</h3><pre id="agent-tool-output" class="agent-output" aria-live="polite">Waiting for the catalog.</pre><details><summary>Input schema</summary><pre id="agent-tool-schema" class="agent-output"></pre></details></div>
+    </div>
+  </section>
+  <section class="workflow-info-card" style="margin-top:1.5rem;"><h2>Need an integration delivered?</h2><p>The Agent Tool Integration service can wire up to three of these tools into one existing agent workflow, including validation, error handling and repeatable tests. It does not buy placement in ChatGPT, Claude, Gemini or any other agent's recommendations.</p><a class="workflow-primary-link" href="/services?service=agent-tool-integration">View integration scope — from $399</a></section>
+</div>
+      </div>
+    </div>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-features-row">
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #8B5CF6;">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <div class="feature-title">Free Core Tools</div>
+        <div class="feature-sub">No fee for core tool use.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #06B6D4;">
+          <span class="material-symbols-outlined">shield_lock</span>
+        </div>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-sub">Files stay on your device.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #F43F5E;">
+          <span class="material-symbols-outlined">no_accounts</span>
+        </div>
+        <div class="feature-title">No Registration</div>
+        <div class="feature-sub">Start using instantly.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #EAB308;">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <div class="feature-title">Lightning Fast</div>
+        <div class="feature-sub">Client-side processing.</div>
+      </div>
+    </div>
+
+    <div class="footer-line-divider"></div>
+
+    <div class="footer-main-row">
+      <div class="footer-brand-side">
+        <h3 class="footer-brand-name">100ToolCrate</h3>
+        <p class="footer-brand-desc">
+          Precision built utilities for the modern web.<br>
+          Free core tools. Local-first processing.
+        </p>
+        <div class="footer-brand-copyright">
+          © 2026 100ToolCrate.
+        </div>
+      </div>
+
+      <div class="footer-columns-side">
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">NAVIGATION</span>
+          <a href="/">Home</a>
+          <a href="/tools">All Tools</a>
+          <a href="/workflows">Workflows</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/advertise">Advertise</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">FOR BUILDERS</span>
+          <a href="/agents">AI agent API & MCP</a>
+          <a href="/services">Done-for-you services</a>
+          <a href="/advertise">Sponsorships</a>
+          <a href="/editorial-policy">Editorial policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">PLATFORM</span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <button type="button" class="pwa-install-link" data-ad-choices>
+            <span class="material-symbols-outlined" aria-hidden="true">ad_group</span>
+            Ad choices
+          </button>
+          <button type="button" class="pwa-install-link" data-pwa-install>
+            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+            Install app
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js?v=2026-11-10-v88-agent-growth" defer></script>
+
+
+<script src="/assets/js/agent-playground.js?v=2026-11-10-v88-agent-growth" defer></script>
+</body>
+</html>

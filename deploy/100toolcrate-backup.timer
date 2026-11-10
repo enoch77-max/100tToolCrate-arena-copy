@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily verified 100ToolCrate backup
+
+[Timer]
+OnCalendar=*-*-* 03:17:00
+RandomizedDelaySec=15m
+Persistent=true
+Unit=100toolcrate-backup.service
+
+[Install]
+WantedBy=timers.target

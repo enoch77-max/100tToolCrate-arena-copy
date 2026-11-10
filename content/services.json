@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "agent-tool-integration",
+    "icon": "smart_toy",
+    "name": "AI Agent Tool Integration",
+    "shortName": "Agent integration",
+    "price": 399,
+    "delivery": "Target: 5 business days after scope approval",
+    "summary": "Connect 100ToolCrate's real REST or MCP tools to one agent workflow with tested calls and integration notes.",
+    "deliverables": [
+      "One agent or automation workflow using up to three public execution tools",
+      "Input mapping, validation, and error-state handling",
+      "A repeatable test script with example successful and rejected calls",
+      "Handoff notes covering deployment configuration and data handling"
+    ],
+    "requirements": "Access to a non-production copy of your agent project, one target workflow, and test data without secrets.",
+    "notIncluded": "Custom model training, guaranteed agent recommendations, production credentials embedded in code, browser-only PDF/image execution, or ongoing hosting.",
+    "addons": [
+      { "id": "extra-tools", "label": "Up to three additional execution tools", "price": 149 },
+      { "id": "integration-docs", "label": "Internal developer walkthrough and operating guide", "price": 99 }
+    ]
+  },
+  {
+    "slug": "seo-launch-remediation",
+    "icon": "travel_explore",
+    "name": "Technical SEO Launch Remediation",
+    "shortName": "SEO remediation",
+    "price": 249,
+    "delivery": "Target: 5 business days after access and scope approval",
+    "summary": "A concrete technical review and implementation pass for a small static website, focused on crawlability and page quality rather than ranking promises.",
+    "deliverables": [
+      "Crawl of up to 50 agreed URLs with canonical, robots, sitemap, status, title and description checks",
+      "Implementation of agreed technical fixes in one supplied repository",
+      "Editorial review of five priority pages with a written action list",
+      "Post-change route and structured-data validation report"
+    ],
+    "requirements": "Repository or staging access, a current sitemap, and identification of five priority pages. Search Console access is helpful but not required.",
+    "notIncluded": "Guaranteed rankings or traffic, link buying, mass AI articles, keyword-stuffed pages, content for YMYL professional advice, or ongoing link building.",
+    "addons": [
+      { "id": "larger-crawl", "label": "Expand the crawl to 200 agreed URLs", "price": 99 },
+      { "id": "search-console", "label": "Search Console coverage review using owner-provided access", "price": 79 }
+    ]
+  },
+  {
+    "slug": "web-image-optimization",
+    "icon": "imagesmode",
+    "name": "Website Image Optimization Sprint",
+    "shortName": "Image optimization",
+    "price": 199,
+    "delivery": "Target: 4 business days after receiving assets",
+    "summary": "Prepare a consistent, measurable web-image export set with documented dimensions, formats, and before/after byte counts.",
+    "deliverables": [
+      "Optimization of up to 50 supplied images against an agreed size/format matrix",
+      "Visual review of crops, transparency, labels, and visible compression artifacts",
+      "Before/after byte-count spreadsheet and descriptive export filenames",
+      "Organized delivery archive; original source files remain separate"
+    ],
+    "requirements": "Source images, target display sizes, and an approved transfer channel arranged after inquiry. Paid service files are not covered by the free tools' local-only processing model.",
+    "notIncluded": "Photography, background removal guarantees, inaccessible marketplace acceptance guarantees, original design work, or a guarantee of search-ranking improvement.",
+    "addons": [
+      { "id": "extra-images", "label": "Up to 50 additional images", "price": 99 },
+      { "id": "responsive-matrix", "label": "Three-size responsive export matrix for up to 20 images", "price": 129 }
+    ]
+  },
+  {
+    "slug": "json-csv-data-cleanup",
+    "icon": "data_object",
+    "name": "JSON / CSV Data Cleanup",
+    "shortName": "Data cleanup",
+    "price": 149,
+    "delivery": "Target: 3 business days after sample approval",
+    "summary": "Turn a messy export into a documented, validated dataset with explicit conversion and deduplication rules.",
+    "deliverables": [
+      "One JSON or CSV source containing up to 25,000 records",
+      "A written field mapping and validation rules approved from a sample",
+      "Duplicate detection using an agreed key, CSV formula-injection protection, and error report",
+      "Clean output plus a repeatable conversion script where the format allows"
+    ],
+    "requirements": "A representative sample, desired schema, and confirmation that you are authorized to share the data. Remove secrets and unnecessary personal data before transfer.",
+    "notIncluded": "Data recovery from damaged media, undisclosed sources, sensitive regulated datasets, perfect automatic deduplication, or legal/compliance certification.",
+    "addons": [
+      { "id": "extra-records", "label": "Up to 100,000 total records", "price": 149 },
+      { "id": "second-source", "label": "Add a second related source and join rules", "price": 129 }
+    ]
+  },
+  {
+    "slug": "private-tools-vps-deployment",
+    "icon": "deployed_code",
+    "name": "Private Tools VPS Deployment",
+    "shortName": "Private deployment",
+    "price": 799,
+    "delivery": "Target: 7 business days after access and scope approval",
+    "summary": "Deploy this browser-tool and agent-API stack on your own VPS with HTTPS, process management, backups, and a verified handoff.",
+    "deliverables": [
+      "Installation on one owner-provided Ubuntu or Debian VPS using the project release process",
+      "Nginx reverse proxy, systemd service, SQLite migrations and the 18-tool public execution API",
+      "Certbot HTTPS setup, canonical route checks, backup timer and integrity test",
+      "A branded deployment-note handoff with update, restore and credential-rotation steps"
+    ],
+    "requirements": "A freshly provisioned supported VPS, DNS control, and temporary access arranged securely after inquiry. Never place root passwords or private keys in the website form.",
+    "notIncluded": "Custom tool development, domain/VPS fees, a private fork's long-term maintenance, high-availability clustering, 24/7 support, compliance certification or hiding third-party CDN dependencies without a separate scope.",
+    "addons": [
+      { "id": "custom-domain-brand", "label": "Name, logo, color and homepage branding pass", "price": 199 },
+      { "id": "thirty-day-support", "label": "Up to two hours of deployment support within 30 days", "price": 199 }
+    ]
+  }
+]

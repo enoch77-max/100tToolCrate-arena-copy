@@ -1,0 +1,450 @@
+[
+  {
+    "slug": "prepare-pdf-for-email",
+    "category": "PDF",
+    "icon": "forward_to_inbox",
+    "title": "Prepare a PDF for email without uploading it",
+    "shortTitle": "Email-ready PDF",
+    "seoTitle": "How to Prepare and Compress a PDF for Email (Private Workflow)",
+    "description": "Combine scattered documents, put pages in the right order, compress the final PDF, and verify it before sending—all locally in your browser.",
+    "audience": "Job applications, client documents, school submissions, and email attachments",
+    "duration": "About 8 minutes",
+    "intro": [
+      "Email attachments fail for mundane reasons: the receipt is in a separate file, a scanned page is sideways, or the final document is larger than the recipient's mail server allows. Fixing those issues before compression avoids repeatedly degrading the same pages.",
+      "This workflow keeps the original files untouched. Each tool opens in a new tab, and your checklist position is saved in this browser so you can return after downloading each intermediate file."
+    ],
+    "steps": [
+      {
+        "title": "Combine the documents that belong together",
+        "body": "Add the cover letter, form, and supporting pages in one place. If a page only needs rotation, finish that correction before merging so you are reviewing the document as the recipient will see it.",
+        "tool": "pdf-merger",
+        "action": "Merge source PDFs",
+        "settings": ["Use descriptive source filenames", "Keep an unchanged backup of every source file"]
+      },
+      {
+        "title": "Set the reading order",
+        "body": "Review the merged document page by page. Put the requested form first when an application portal specifies an order, and remove accidental duplicates before optimizing the file.",
+        "tool": "pdf-reorder",
+        "action": "Arrange PDF pages",
+        "settings": ["Cover page or required form first", "Supporting evidence after the main document"]
+      },
+      {
+        "title": "Compress the finished document once",
+        "body": "Compress after editing, not before. Start with a balanced setting and compare small text, signatures, and fine lines against the original. If the result is still too large, increase compression gradually rather than repeatedly compressing the output.",
+        "tool": "pdf-compressor",
+        "action": "Reduce PDF size",
+        "settings": ["Check the displayed output size", "Inspect small text at 100% zoom"]
+      },
+      {
+        "title": "Verify the attachment before sending",
+        "body": "Confirm the final page count and open the downloaded file itself—not the preview of an earlier version. Rename it with a clear subject and version, then attach that exact file to your message.",
+        "tool": "pdf-counter",
+        "action": "Check final page count",
+        "settings": ["Use a filename such as surname-application-v1.pdf", "Open the downloaded attachment as a final check"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Compressing each source separately", "body": "Multiple lossy passes can make scans blurry. Assemble and correct the document first, then compress the final version once." },
+      { "title": "Assuming a smaller file is always better", "body": "A signature, stamp, or QR code that cannot be read makes the attachment unusable. Legibility is the acceptance criterion, not the smallest possible byte count." },
+      { "title": "Sending an editable working file", "body": "Send the exported PDF you inspected, and retain source documents separately. Remove sensitive metadata when the recipient does not need it." }
+    ],
+    "faqs": [
+      { "q": "What PDF size is safe for email?", "a": "There is no universal limit: sending and receiving providers both apply their own limits. Aim comfortably below the limit stated by your provider, and use a shared file link only when the recipient permits it." },
+      { "q": "Does this workflow upload my documents?", "a": "No. The linked 100ToolCrate tools process the files in your browser. Closing the tab does not send a copy to 100ToolCrate." },
+      { "q": "Should I password-protect an emailed application?", "a": "Only when the recipient expects encryption and you have a separate channel for the password. Unexpected password protection can prevent automated application systems from reading the document." }
+    ],
+    "related": ["client-invoice-and-tax", "debug-json-api-response"]
+  },
+  {
+    "slug": "optimize-product-images-for-web",
+    "category": "Image",
+    "icon": "imagesmode",
+    "title": "Optimize product images for a faster online store",
+    "shortTitle": "Product image pipeline",
+    "seoTitle": "Product Image Optimization Workflow: Crop, Resize, WebP, Compress",
+    "description": "A practical image pipeline for store listings: consistent crops, correct display dimensions, modern formats, compression, and metadata cleanup.",
+    "audience": "Store owners, marketplace sellers, marketers, and front-end developers",
+    "duration": "About 12 minutes per image set",
+    "intro": [
+      "Product images often arrive straight from a camera at dimensions far larger than their display container. Serving those originals wastes bandwidth and makes cropping inconsistent from one listing to the next.",
+      "The reliable order is crop, resize, convert, then compress. Changing dimensions after heavy compression can soften details, while cropping after export leaves you managing multiple incompatible versions."
+    ],
+    "steps": [
+      {
+        "title": "Standardize the crop",
+        "body": "Choose one aspect ratio for each listing position and keep the product at a consistent visual scale. Leave enough clear space around the item so marketplace overlays or responsive crops do not cover important details.",
+        "tool": "image-cropper",
+        "action": "Crop product photos",
+        "settings": ["Square for uniform catalog grids", "Keep the entire product inside the safe area"]
+      },
+      {
+        "title": "Resize for the largest real display size",
+        "body": "Export for the container and intended pixel density rather than keeping camera dimensions. A thumbnail does not need a full-resolution zoom master; maintain separate masters when your store supports zoom.",
+        "tool": "image-resizer",
+        "action": "Set image dimensions",
+        "settings": ["Measure the storefront container", "Preserve aspect ratio to prevent distortion"]
+      },
+      {
+        "title": "Create an efficient web version",
+        "body": "Use WebP for photographic catalog assets when your storefront supports it. Keep the original PNG when transparency or exact source editing matters, and provide a fallback only where your stack requires one.",
+        "tool": "image-to-webp",
+        "action": "Convert to WebP",
+        "settings": ["Retain a separate original master", "Check transparent edges after conversion"]
+      },
+      {
+        "title": "Compress and inspect at actual size",
+        "body": "Compare fabric texture, product edges, and printed labels before accepting the result. Judge the image at the size customers see; an oversized preview can hide artifacts that become obvious in a listing grid.",
+        "tool": "image-compressor",
+        "action": "Compress web images",
+        "settings": ["Compare original and output bytes", "Reject visible halos or smeared labels"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Using dimensions as a compression strategy", "body": "A small image displayed in a large container looks soft. Match export dimensions to the layout first, then tune compression." },
+      { "title": "Editing the only original", "body": "Keep camera masters outside the web-export folder. Every crop and compressed export should be reproducible from that source." },
+      { "title": "Publishing camera metadata unnecessarily", "body": "Product photos can carry device or location metadata. Inspect and remove fields that your storefront does not need before publishing." }
+    ],
+    "faqs": [
+      { "q": "Should every product photo become WebP?", "a": "Usually it is a good web-delivery format, but your storefront, marketplace, and fallback requirements decide. Some marketplaces reprocess uploads themselves and specify accepted input formats." },
+      { "q": "What resolution should a product image be?", "a": "Start from the largest CSS display size and your pixel-density target. There is no single correct pixel width across stores; zoom views and thumbnails should be treated as different assets." },
+      { "q": "Can compression improve search rankings directly?", "a": "Compression is not a ranking switch. Smaller, correctly sized images can improve loading and user experience, which are useful parts of a broader page-quality effort." }
+    ],
+    "related": ["launch-page-seo-check", "website-handoff-assets"]
+  },
+  {
+    "slug": "debug-json-api-response",
+    "category": "Dev",
+    "icon": "data_object",
+    "title": "Debug a JSON API response methodically",
+    "shortTitle": "JSON API debugging",
+    "seoTitle": "How to Debug a JSON API Response: Validate, Format, Inspect",
+    "description": "Isolate malformed JSON, locate syntax errors, inspect token claims safely, and turn nested response data into a reviewable CSV.",
+    "audience": "Developers, QA engineers, analysts, and anyone inspecting API output",
+    "duration": "About 10 minutes",
+    "intro": [
+      "A blank screen or generic parsing error does not tell you whether the API returned invalid JSON, an unexpected schema, or an authentication problem. Separate those possibilities instead of changing application code at random.",
+      "Copy a minimal failing response and remove secrets before sharing it. These checks run locally, but redaction is still important when you later attach examples to tickets or issue trackers."
+    ],
+    "steps": [
+      {
+        "title": "Validate the payload before reading values",
+        "body": "Paste the raw response body exactly as received. If validation fails, fix transport issues such as an HTML error page or truncated body before investigating your data model.",
+        "tool": "json-validator",
+        "action": "Validate response JSON",
+        "settings": ["Do not paste surrounding log timestamps", "Check for HTML returned by a proxy or login page"]
+      },
+      {
+        "title": "Format it to reveal structure",
+        "body": "Indent the valid payload and inspect nesting, null values, and arrays with unexpected lengths. Compare the actual keys with the names your application reads, including capitalization.",
+        "tool": "json-formatter",
+        "action": "Format the payload",
+        "settings": ["Look for strings where numbers are expected", "Check whether the payload is wrapped in a data property"]
+      },
+      {
+        "title": "Inspect JWT claims when authentication is involved",
+        "body": "If the API uses a bearer token, decode it locally to inspect issuer, audience, and expiry claims. Decoding is not signature verification; a readable token is not automatically trustworthy.",
+        "tool": "jwt-decoder",
+        "action": "Inspect token claims",
+        "settings": ["Compare exp with the current time", "Never treat client-side decoding as authorization"]
+      },
+      {
+        "title": "Export records for comparison",
+        "body": "When the issue affects many records, convert a suitable JSON array to CSV. Sort or filter the export in your spreadsheet to spot missing fields and inconsistent values across the response set.",
+        "tool": "json-to-csv",
+        "action": "Convert records to CSV",
+        "settings": ["Use a representative record set", "Flattening nested objects may require a simpler input projection"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Formatting before checking the response type", "body": "A formatted HTML error page is still not JSON. Confirm status, content type, and raw body first." },
+      { "title": "Trusting decoded JWT content", "body": "JWT payloads are encoded, not encrypted. Signature validation belongs in the relying service with the correct key and algorithm restrictions." },
+      { "title": "Posting production secrets publicly", "body": "Local processing reduces exposure but does not redact access tokens, personal data, or session identifiers in screenshots and bug reports." }
+    ],
+    "faqs": [
+      { "q": "Why does valid JSON still break my application?", "a": "Syntax validity and schema compatibility are different. The payload can be valid while containing different keys, types, nesting, or nullability than your code expects." },
+      { "q": "Can these tools tell me why an API returned 401?", "a": "They can help inspect the body and token claims, but the server decides authorization. Also check the request headers, token audience, scopes, clock skew, and environment configuration." },
+      { "q": "Is it safe to paste tokens into this workflow?", "a": "The decoder runs locally, but the safest debugging practice is still to use short-lived test tokens and revoke production credentials that were exposed anywhere." }
+    ],
+    "related": ["website-handoff-assets", "launch-page-seo-check"]
+  },
+  {
+    "slug": "launch-page-seo-check",
+    "category": "SEO",
+    "icon": "travel_explore",
+    "title": "Run a pre-launch SEO check on a new page",
+    "shortTitle": "Pre-launch SEO check",
+    "seoTitle": "Free Pre-Launch SEO Checklist: Titles, Metadata, Social and Crawlers",
+    "description": "Check a page's slug, search snippet, social preview, content focus, and crawler rules before you publish or request indexing.",
+    "audience": "Site owners, content editors, indie hackers, and web developers",
+    "duration": "About 15 minutes per page",
+    "intro": [
+      "A page can look finished in a design review while still having a duplicate title, an unfinished social card, or a crawler rule carried over from staging. These are inexpensive to fix before launch and annoying to correct after URLs have been shared.",
+      "This workflow checks specific deliverables. It does not promise rankings: relevance, competition, links, technical accessibility, and search-engine decisions remain outside any checklist's control."
+    ],
+    "steps": [
+      {
+        "title": "Create a stable, readable slug",
+        "body": "Turn the working title into a short URL that reflects the page topic. Remove dates and campaign wording unless they are genuinely part of the content, then keep the published slug stable.",
+        "tool": "slug-generator",
+        "action": "Generate the URL slug",
+        "settings": ["Use lowercase words separated by hyphens", "Avoid keyword stuffing and stop-word-only URLs"]
+      },
+      {
+        "title": "Write a distinct search title and description",
+        "body": "Check the title for clarity and length, then write a description that accurately sets expectations. Put the distinguishing information in the visible copy rather than repeating the same phrase in every field.",
+        "tool": "meta-title-checker",
+        "action": "Check the title tag",
+        "settings": ["One unique title per indexable page", "Match the actual page purpose"]
+      },
+      {
+        "title": "Preview the social share",
+        "body": "Inspect how the title, description, canonical URL, and image work together when the page is shared. Use an image that remains understandable at small sizes and test the final public URL after deployment.",
+        "tool": "og-previewer",
+        "action": "Preview social metadata",
+        "settings": ["Use an absolute public image URL", "Avoid text too close to the image edges"]
+      },
+      {
+        "title": "Check content focus and crawler directives",
+        "body": "Review natural phrase coverage without chasing a density target. Then verify robots and AI-crawler rules intentionally reflect your policy, and ensure staging blocks are not present on the production page.",
+        "tool": "ai-crawler-robots-generator",
+        "action": "Review crawler rules",
+        "settings": ["Keep important pages internally linked", "Test robots.txt and meta robots separately"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Optimizing for a pixel count alone", "body": "Search displays vary by device and query. A title should communicate the topic clearly even when it is not truncated." },
+      { "title": "Using keyword density as a target score", "body": "Repetition can make copy worse. Cover the subject, define terms, answer real questions, and use descriptive internal links instead." },
+      { "title": "Requesting indexing before the page is public", "body": "Verify the canonical, status code, robots rules, and rendered content on the live URL before submitting it to search tools." }
+    ],
+    "faqs": [
+      { "q": "Will this checklist make a page rank?", "a": "No checklist can guarantee rankings. It helps catch avoidable publishing errors; search performance also depends on usefulness, competition, discovery, links, and search-engine evaluation." },
+      { "q": "How long should a meta description be?", "a": "Write a concise, accurate summary and inspect it in a preview. Search engines may rewrite descriptions or choose page text, so there is no guaranteed display length." },
+      { "q": "Should every page be submitted for indexing?", "a": "Submit important new or substantially updated canonical pages. Keep thin internal search results, duplicates, and private pages out of the indexable set." }
+    ],
+    "related": ["optimize-product-images-for-web", "tracked-qr-campaign"]
+  },
+  {
+    "slug": "tracked-qr-campaign",
+    "category": "QR",
+    "icon": "qr_code_2",
+    "title": "Create a trackable QR code for an offline campaign",
+    "shortTitle": "Trackable QR campaign",
+    "seoTitle": "How to Create a Trackable QR Code With UTM Campaign Links",
+    "description": "Build a consistently tagged campaign URL, generate a scannable QR code, test it on a phone, and prepare a clear printed label.",
+    "audience": "Local businesses, event organizers, restaurant owners, and campaign teams",
+    "duration": "About 10 minutes",
+    "intro": [
+      "A QR code only records the destination you give it. Without campaign parameters, offline visits blend into direct traffic and become difficult to evaluate. A consistent naming convention is more valuable than an elaborate code design.",
+      "Plan the destination before printing. The landing page should work well on mobile, match the promise beside the code, and remain available for as long as the printed material circulates."
+    ],
+    "steps": [
+      {
+        "title": "Tag the destination URL",
+        "body": "Use lowercase campaign values your team can recognize later. Keep source and medium stable across every poster in the same placement, and use content to distinguish creative or location variants.",
+        "tool": "utm-builder",
+        "action": "Build a UTM link",
+        "settings": ["Example medium: qr", "Example source: storefront or event_poster", "Use a documented campaign naming convention"]
+      },
+      {
+        "title": "Generate the code from the final URL",
+        "body": "Paste the complete tagged URL and avoid unnecessary visual complexity. Long URLs create denser codes, so a concise destination can improve scanning while retaining the campaign data.",
+        "tool": "qr-generator",
+        "action": "Generate campaign QR",
+        "settings": ["Dark foreground on a light background", "Preserve quiet space around the code"]
+      },
+      {
+        "title": "Test the printed-size result",
+        "body": "Scan with more than one phone when possible and check that the landing page retains the expected query parameters. Test under the lighting and at the distance people will actually use.",
+        "tool": "qr-scanner",
+        "action": "Test the QR code",
+        "settings": ["Test from the final printed proof", "Confirm the destination uses HTTPS"]
+      },
+      {
+        "title": "Add an instruction and destination cue",
+        "body": "People need a reason to scan. Add a short action such as ‘View the menu’ or ‘Get the event schedule,’ and include a readable fallback URL for anyone who cannot use the code.",
+        "tool": "qr-label-maker",
+        "action": "Prepare the QR label",
+        "settings": ["State the benefit beside the code", "Do not place the code over folds or reflective surfaces"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Changing UTM capitalization between assets", "body": "Analytics tools can treat case variants as separate values. Keep a shared naming sheet for source, medium, campaign, and content." },
+      { "title": "Testing only on a large monitor", "body": "A code that scans at desktop size may fail on a small flyer. Print a proof at the final physical size and viewing distance." },
+      { "title": "Using a destination you cannot maintain", "body": "Printed material outlives many web campaigns. Choose a durable landing page or a redirect process you control." }
+    ],
+    "faqs": [
+      { "q": "Does a QR code track scans by itself?", "a": "A standard static QR code simply encodes a destination. Measurement comes from the landing-page analytics and campaign parameters, subject to consent and browser privacy settings." },
+      { "q": "Can I edit the URL after printing?", "a": "Not inside a static printed code. To change destinations later, print a stable URL you control and manage its redirect or landing content." },
+      { "q": "Are UTM parameters personal data?", "a": "They normally describe a campaign rather than a person. Do not place names, email addresses, or other personal identifiers in campaign parameters." }
+    ],
+    "related": ["launch-page-seo-check", "client-invoice-and-tax"]
+  },
+  {
+    "slug": "client-invoice-and-tax",
+    "category": "Calc",
+    "icon": "receipt_long",
+    "title": "Price, calculate, and prepare a client invoice",
+    "shortTitle": "Client invoice workflow",
+    "seoTitle": "Freelancer Invoice Workflow: Margin, Tax, PDF and Payment Details",
+    "description": "Check the project margin, calculate applicable tax, prepare a clear invoice, and export a client-ready document without losing the working figures.",
+    "audience": "Freelancers, consultants, small agencies, and independent service providers",
+    "duration": "About 12 minutes",
+    "intro": [
+      "An invoice should agree with the quote, explain the charges, and make payment unambiguous. Calculating tax or margin directly inside a final document makes avoidable arithmetic errors harder to spot.",
+      "Tax rules differ by jurisdiction and customer. Treat the calculations here as arithmetic aids, then confirm registration, rates, reverse-charge wording, and record-keeping duties with a qualified local adviser."
+    ],
+    "steps": [
+      {
+        "title": "Check the project economics",
+        "body": "Separate revenue from direct costs before interpreting margin. Include subcontractor fees and other delivery costs consistently; do not confuse markup percentage with profit margin.",
+        "tool": "profit-margin",
+        "action": "Check profit margin",
+        "settings": ["Use the same currency for revenue and costs", "Record assumptions in your project notes"]
+      },
+      {
+        "title": "Calculate the applicable tax line",
+        "body": "Confirm whether displayed prices include tax before calculating. Keep the net amount, tax rate, tax amount, and gross total distinct so the invoice can be checked line by line.",
+        "tool": "vat-tax",
+        "action": "Calculate tax",
+        "settings": ["Verify the legally applicable rate", "Round according to your invoicing rules"]
+      },
+      {
+        "title": "Build the client-facing invoice",
+        "body": "Add both parties' details, a unique invoice number, issue and due dates, itemized work, currency, and payment instructions. Match the scope language to the accepted quote or contract.",
+        "tool": "invoice-generator",
+        "action": "Create the invoice",
+        "settings": ["Use a sequential invoice numbering system", "State late-payment terms only if agreed and lawful"]
+      },
+      {
+        "title": "Create a consistent document archive",
+        "body": "If you maintain a text summary or supplementary note, convert the final version to PDF and store it with the invoice. Keep immutable issued copies separate from drafts for future periods.",
+        "tool": "text-to-pdf",
+        "action": "Export supporting notes",
+        "settings": ["Reconcile the exported total with your ledger", "Back up issued invoices and payment status"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Mixing up margin and markup", "body": "Margin uses revenue as the denominator; markup uses cost. A 50% markup does not produce a 50% profit margin." },
+      { "title": "Applying a tax rate without checking the supply", "body": "Customer location, tax registration, and the nature of the service can change treatment. Arithmetic alone cannot determine the correct legal rate." },
+      { "title": "Editing an issued invoice silently", "body": "Use your accounting process for corrections or credit notes and preserve a clear audit trail rather than replacing an already-issued number." }
+    ],
+    "faqs": [
+      { "q": "Does this invoice workflow provide tax advice?", "a": "No. It performs calculations and document preparation. You remain responsible for applicable law, registration, invoice wording, rates, and professional advice." },
+      { "q": "What makes an invoice easy to pay?", "a": "A unique reference, clear due date, itemized charges, correct currency, accurate recipient details, and working payment instructions reduce avoidable back-and-forth." },
+      { "q": "Should I password-protect every invoice?", "a": "Use encryption when the sensitivity and delivery arrangement justify it. Provide the password through a separate channel and ensure the client can actually open the document." }
+    ],
+    "related": ["prepare-pdf-for-email", "tracked-qr-campaign"]
+  },
+  {
+    "slug": "website-handoff-assets",
+    "category": "Dev",
+    "icon": "deployed_code",
+    "title": "Prepare a lean website handoff package",
+    "shortTitle": "Website handoff package",
+    "seoTitle": "Website Launch Handoff: Minify CSS, JS, HTML and Optimize Images",
+    "description": "Format working source files, create minified delivery assets, optimize images, and generate checksums for a reproducible website handoff.",
+    "audience": "Freelance developers, agencies, and teams shipping static websites",
+    "duration": "About 15 minutes",
+    "intro": [
+      "A useful handoff contains readable source and optimized delivery files, not just a folder of ambiguously named exports. Keep both so the next developer can maintain the project without unminifying production assets.",
+      "Minification should follow testing, not replace it. Source maps, build configuration, licensing notices, and cache-busting strategy still belong in the project even when these browser tools prepare individual assets."
+    ],
+    "steps": [
+      {
+        "title": "Normalize the readable source",
+        "body": "Format CSS before reviewing it so inconsistent indentation does not hide accidental overrides. Commit or save this readable version as the maintenance source before producing a minified counterpart.",
+        "tool": "css-beautifier",
+        "action": "Format CSS source",
+        "settings": ["Resolve lint and browser issues first", "Preserve required license comments"]
+      },
+      {
+        "title": "Create production CSS and JavaScript",
+        "body": "Minify copies of the tested assets and compare behavior in the actual site. A smaller file is not a successful build if it removes something your runtime or third-party integration expects.",
+        "tool": "css-minifier",
+        "action": "Minify delivery CSS",
+        "settings": ["Keep source and output in separate directories", "Test the minified output, not only the source"]
+      },
+      {
+        "title": "Optimize image assets",
+        "body": "Resize images for their layout and compress the exports before packaging them. Avoid recompressing an already optimized asset every time you prepare a handoff.",
+        "tool": "image-compressor",
+        "action": "Optimize handoff images",
+        "settings": ["Use descriptive, stable filenames", "Check transparent images and icons visually"]
+      },
+      {
+        "title": "Generate integrity checksums",
+        "body": "Create hashes for the final archive or key deliverables so the recipient can detect accidental changes or incomplete transfers. Record the algorithm and hash alongside the exact filename.",
+        "tool": "hash-generator",
+        "action": "Hash final deliverables",
+        "settings": ["Hash the final file after all edits", "A checksum detects changes; it does not prove who created the file"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Keeping only minified code", "body": "That makes future maintenance unnecessarily difficult. Deliver readable source, dependency instructions, and the exact production output." },
+      { "title": "Assuming minification fixes performance", "body": "Unused frameworks, oversized media, blocking requests, and poor caching can matter more. Measure the page after packaging." },
+      { "title": "Treating hashes as signatures", "body": "A plain checksum can be replaced along with the file. Use authenticated signing when provenance or tamper resistance is required." }
+    ],
+    "faqs": [
+      { "q": "Should I minify HTML, CSS, and JavaScript manually?", "a": "For a small static handoff it can be useful. Ongoing projects are usually safer with a reproducible build pipeline that also handles source maps, hashing, and tests." },
+      { "q": "What belongs in a complete handoff?", "a": "Readable source, production assets, setup instructions, dependency and license information, environment-variable examples without secrets, deployment notes, and a verified archive." },
+      { "q": "Why include a checksum?", "a": "It lets the recipient verify that a specific file matches the delivered bytes. It is useful for transfer verification, but it is not a replacement for signed releases." }
+    ],
+    "related": ["debug-json-api-response", "optimize-product-images-for-web"]
+  },
+  {
+    "slug": "passport-photo-preparation",
+    "category": "Image",
+    "icon": "badge",
+    "title": "Prepare a passport photo for an online application",
+    "shortTitle": "Passport photo preparation",
+    "seoTitle": "Passport Photo Workflow: Crop, Background, Size and Compression",
+    "description": "Prepare a clear passport-style photo, check dimensions and file size, and understand what must be verified against your issuing authority's rules.",
+    "audience": "Travelers and applicants preparing passport or identification photos",
+    "duration": "About 10 minutes",
+    "intro": [
+      "Passport photo requirements vary by country and application type. Dimensions, background, recency, expression, head position, and digital retouching rules can differ, so start with the issuing authority's current instructions.",
+      "This workflow helps with file preparation only. It cannot certify compliance or guarantee acceptance, and cosmetic background editing may be prohibited for some applications."
+    ],
+    "steps": [
+      {
+        "title": "Start with the authority's dimensions",
+        "body": "Use the 600×600 preset only when the authority specifically requests a 2×2-inch photo at 300 DPI. For other dimensions, use the general cropper and resize tools instead. The original should be sharp, evenly lit, recent, and free of heavy filters.",
+        "tool": "passport-photo-maker",
+        "action": "Use the 2×2 crop preset",
+        "settings": ["Only for an exact 2×2-inch at 300 DPI requirement", "Check that a centered square crop keeps head and shoulders positioned correctly"]
+      },
+      {
+        "title": "Correct the crop without stretching",
+        "body": "Preserve aspect ratio and avoid enlarging a tiny source into a blurry output. Ensure ears, chin, hair, and head covering follow the specific application rules.",
+        "tool": "image-cropper",
+        "action": "Refine the crop",
+        "settings": ["Do not alter facial geometry", "Keep enough resolution for the required output"]
+      },
+      {
+        "title": "Handle background changes cautiously",
+        "body": "Use a background tool only when the issuing authority permits digital alteration. A naturally compliant background in the original photograph is usually safer than aggressive cutout editing.",
+        "tool": "bg-color-changer",
+        "action": "Check background options",
+        "settings": ["Verify digital editing is allowed", "Avoid halos and changed facial edges"]
+      },
+      {
+        "title": "Meet file constraints without hiding detail",
+        "body": "Check the portal's accepted format and byte range, then compress conservatively. The final photo must remain clear and natural; file-size compliance does not override photo-quality rules.",
+        "tool": "image-compressor",
+        "action": "Adjust final file size",
+        "settings": ["Use the accepted output format", "Inspect eyes, skin texture, and edges after export"]
+      }
+    ],
+    "mistakes": [
+      { "title": "Treating a template as certification", "body": "A correctly sized image can still fail lighting, pose, recency, or background rules. Only the issuing authority can determine acceptance." },
+      { "title": "Over-editing the portrait", "body": "Beauty filters, reshaping, skin smoothing, and unapproved background replacement can make the photo invalid." },
+      { "title": "Uploading a screenshot", "body": "Screenshots add interface elements and reduce resolution. Export the actual photo at the required dimensions instead." }
+    ],
+    "faqs": [
+      { "q": "Will this guarantee my passport photo is accepted?", "a": "No. Requirements and acceptance decisions belong to the issuing authority. Use its current official guidance and its own photo-checking service when available." },
+      { "q": "Can I change the background digitally?", "a": "That depends on the application. Some authorities restrict digital alterations, so confirm before using any background-editing tool." },
+      { "q": "Are photos uploaded to 100ToolCrate?", "a": "The linked editing tools process images locally in your browser. You should still use a private device and delete unnecessary exported copies when finished." }
+    ],
+    "related": ["optimize-product-images-for-web", "prepare-pdf-for-email"]
+  }
+]

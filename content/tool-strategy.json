@@ -1,0 +1,15 @@
+{
+  "homepage": [
+    "image-compressor", "image-resizer", "pdf-merger", "pdf-compressor",
+    "json-formatter", "json-validator", "word-counter", "qr-generator",
+    "password-generator", "uuid-generator", "base64-encoder", "image-to-webp",
+    "pdf-splitter", "images-to-pdf", "meta-title-checker", "utm-builder",
+    "invoice-generator", "llm-token-counter", "jwt-decoder", "unix-timestamp-converter",
+    "regex-tester", "case-converter", "slug-generator", "date-diff"
+  ],
+  "lifecyclePolicy": "Retire a tool only for verified obsolescence, an unfixable security problem, or sustained replacement by a better maintained equivalent. Low aggregate counters alone are not deletion evidence. Keep useful long-tail tools in the directory while focusing the homepage on high-intent tasks.",
+  "indexReview": {
+    "alternatives": "noindex_until_rewritten",
+    "reason": "Five comparison pages measured 83–84% eight-word-shingle similarity and contained unverified competitor and unlimited-use claims. They remain available to direct visitors but are excluded from the sitemap and marked noindex until individually researched."
+  }
+}

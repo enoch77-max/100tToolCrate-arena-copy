@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='43' y='10' width='14' height='40' rx='2' fill='%2306b6d4'/><polygon points='50,95 5,70 5,35 50,60' fill='%230a2a5e'/><polygon points='50,95 95,70 95,35 50,60' fill='%230a2a5e'/></svg>">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+<link rel="api-catalog" href="/.well-known/api-catalog">
+<link rel="service-doc" href="/docs/api">
+<meta name="theme-color" content="#0B0E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="100ToolCrate">
+<meta name="msvalidate.01" content="ABE9D58FD670A809B29645CC7CCA575E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=2026-11-10-v88-agent-growth">
+<script>window.TC_ADSENSE_CLIENT="ca-pub-5986395187107423";</script>
+<script src="/assets/js/monetization.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/theme.js?v=2026-11-10-v88-agent-growth"></script>
+<script src="/assets/js/pwa.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/webmcp.js?v=2026-11-10-v88-agent-growth" defer></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6aa3328b8b2c4002bbcc18d0f5215960"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <title>All Tools - 100ToolCrate</title>
+  <meta name="description" content="Browse 120+ free, private, browser-based tools - image, PDF, text, SEO, QR, calculators, productivity timers and developer utilities. No sign-up, 100% client-side.">
+  <link rel="canonical" href="https://100toolcrate.com/tools">
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="site-nav" aria-label="Primary">
+  <div class="nav-wrapper">
+    <div class="nav-brand-group">
+      <a href="/" class="logo-text">
+        100ToolCrate
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-controls="nav-categories-menu" id="nav-categories-btn">
+          Categories <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content" id="nav-categories-menu" role="group" aria-labelledby="nav-categories-btn">
+          <a href="/tools?cat=image">Image Tools</a>
+          <a href="/tools?cat=dev">Dev Tools</a>
+          <a href="/tools?cat=pdf">PDF Utilities</a>
+          <a href="/tools?cat=text">Text Tools</a>
+          <a href="/tools?cat=calc">Calculators</a>
+          <a href="/tools?cat=productivity">Productivity</a>
+          <a href="/tools?cat=qr">QR Tools</a>
+          <a href="/tools?cat=seo">SEO Tools</a>
+          <a href="/tools?cat=personality">Personality Tests</a>
+        </div>
+      </div>
+      <a href="/workflows">Workflows</a>
+      <a href="/services">Services</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+        <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+      </button>
+      <button class="menu-toggle" aria-label="Open sidebar navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-label="Site navigation sidebar" inert>
+  <div class="sidebar-header">
+    <a href="/" class="logo-text" style="font-size: 1.15rem;">100ToolCrate</a>
+    <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+      <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+    </button>
+  </div>
+  <div class="sidebar-content">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <div class="sidebar-section-title">Navigation</div>
+      <a href="/" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">home</span>
+        Home
+      </a>
+      <a href="/tools" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+        Popular
+      </a>
+      <a href="/workflows" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">checklist</span>
+        Workflows
+      </a>
+      <a href="/blog" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+        Blog
+      </a>
+      <a href="/about" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">info</span>
+        About
+      </a>
+      <a href="/contact" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+        Contact
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section-title">Categories</div>
+
+      <a href="/tools" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F8FAFC;flex-shrink:0;"></span>
+        All Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">122</span>
+      </a>
+      <a href="/tools?cat=image" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#60A5FA;flex-shrink:0;"></span>
+        Image Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">23</span>
+      </a>
+      <a href="/tools?cat=dev" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#06B6D4;flex-shrink:0;"></span>
+        Dev Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">25</span>
+      </a>
+      <a href="/tools?cat=pdf" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB7185;flex-shrink:0;"></span>
+        PDF Utilities
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=text" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#EAB308;flex-shrink:0;"></span>
+        Text Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=calc" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0;"></span>
+        Calculators
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">13</span>
+      </a>
+      <a href="/tools?cat=productivity" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB923C;flex-shrink:0;"></span>
+        Productivity
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">3</span>
+      </a>
+      <a href="/tools?cat=qr" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#818CF8;flex-shrink:0;"></span>
+        QR Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">9</span>
+      </a>
+      <a href="/tools?cat=seo" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;"></span>
+        SEO Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">7</span>
+      </a>
+      <a href="/tools?cat=personality" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F472B6;flex-shrink:0;"></span>
+        Personality Tests
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">2</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="/privacy-policy" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">policy</span>
+        Privacy Policy
+      </a>
+      <a href="/terms" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">gavel</span>
+        Terms of Service
+      </a>
+      <a href="/disclaimer" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+        Disclaimer
+      </a>
+    </nav>
+  </div>
+</aside>
+
+  <main class="main-content" id="main-content" tabindex="-1">
+    <div style="max-width: 1280px; margin: 0 auto 1.25rem; padding: 0 1rem;">
+      <a id="nav-back-btn" class="nav-back-btn" href="/" aria-label="Go back to parent page" style="display: none;">
+        <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+        <span class="back-text">Back</span>
+      </a>
+    </div>
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <h1 style="font-size: 2.5rem; font-weight: 900; color: var(--text-color); margin-bottom: 0.5rem; letter-spacing: -0.03em;">All Tools Directory</h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 36rem; margin: 0 auto;">Browse our complete collection of 100+ browser-based tools categorized by functionality.</p>
+
+      <!-- Filter Pills -->
+      <div class="filter-pills" id="tools-categories" style="margin-top: 1.5rem;">
+        <button class="filter-btn category-btn active" data-filter="all">All Tools</button>
+        <button class="filter-btn category-btn" data-filter="image">Image Tools</button>
+        <button class="filter-btn category-btn" data-filter="dev">Dev Tools</button>
+        <button class="filter-btn category-btn" data-filter="pdf">PDF Utilities</button>
+        <button class="filter-btn category-btn" data-filter="text">Text Tools</button>
+        <button class="filter-btn category-btn" data-filter="calc">Calculators</button>
+        <button class="filter-btn category-btn" data-filter="productivity">Productivity</button>
+        <button class="filter-btn category-btn" data-filter="qr">QR Tools</button>
+        <button class="filter-btn category-btn" data-filter="seo">SEO Tools</button>
+        <button class="filter-btn category-btn" data-filter="personality">Personality Tests</button>
+      </div>
+    </div>
+    <h2 class="sr-only">Browse all tools</h2>
+    <div class="tools-grid" id="all-tools-grid">
+      <a class="tool-card bento-card" href="/tools/image-compressor" data-category="image" data-tool-id="image-compressor">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">compress</span>
+      </div>
+      <h3>Image Compressor</h3>
+      <p>Compress one image at a time in your browser with adjustable quality and a local before/after preview.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-merger" data-category="pdf" data-tool-id="pdf-merger">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">merge_type</span>
+      </div>
+      <h3>PDF Merger</h3>
+      <p>Combine selected PDF files into one document in your browser, with a visible merge queue and no account required.</p>
+    </a><a class="tool-card bento-card" href="/tools/paragraph-counter" data-category="text" data-tool-id="paragraph-counter">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">segment</span>
+      </div>
+      <h3>Paragraph Counter</h3>
+      <p>Count paragraphs and line breaks.</p>
+    </a><a class="tool-card bento-card" href="/tools/meta-title-checker" data-category="seo" data-tool-id="meta-title-checker">
+      <span class="card-category-badge" data-cat="seo">SEO</span>
+      <div class="icon-box" style="color: #34D399; background-color: rgba(52, 211, 153, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">title</span>
+      </div>
+      <h3>Meta Title Length Checker</h3>
+      <p>Check if your SEO title is within optimal length limits.</p>
+    </a><a class="tool-card bento-card" href="/tools/qr-generator" data-category="qr" data-tool-id="qr-generator">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">qr_code_2</span>
+      </div>
+      <h3>QR Code Generator</h3>
+      <p>Create a custom QR code from text or URL.</p>
+    </a><a class="tool-card bento-card" href="/tools/json-formatter" data-category="dev" data-tool-id="json-formatter">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">data_object</span>
+      </div>
+      <h3>JSON Formatter</h3>
+      <p>Format and beautify ugly JSON strings.</p>
+    </a><a class="tool-card bento-card" href="/tools/percentage-calculator" data-category="calc" data-tool-id="percentage-calculator">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">percent</span>
+      </div>
+      <h3>Percentage Calculator</h3>
+      <p>Calculate percentages easily and accurately.</p>
+    </a><a class="tool-card bento-card" href="/tools/big-five-personality-test" data-category="personality" data-tool-id="big-five-personality-test">
+      <span class="card-category-badge" data-cat="personality">PERSONALITY</span>
+      <div class="icon-box" style="color: #F472B6; background-color: rgba(244, 114, 182, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">psychology</span>
+      </div>
+      <h3>Big Five Personality Test</h3>
+      <p>Take the free 50-item Big Five (OCEAN) assessment and get your openness, conscientiousness, extraversion, agreeableness and neuroticism profile.</p>
+    </a><a class="tool-card bento-card" href="/tools/pomodoro-timer" data-category="productivity" data-tool-id="pomodoro-timer">
+      <span class="card-category-badge" data-cat="productivity">PRODUCTIVITY</span>
+      <div class="icon-box" style="color: #FB923C; background-color: rgba(251, 146, 60, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">timer</span>
+      </div>
+      <h3>Pomodoro Timer</h3>
+      <p>Focus in custom sessions with short and long breaks built in.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-resizer" data-category="image" data-tool-id="image-resizer">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">aspect_ratio</span>
+      </div>
+      <h3>Image Resizer</h3>
+      <p>Resize dimensions of your images quickly online.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-splitter" data-category="pdf" data-tool-id="pdf-splitter">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">call_split</span>
+      </div>
+      <h3>PDF Splitter</h3>
+      <p>Extract pages from a PDF to create a new one.</p>
+    </a><a class="tool-card bento-card" href="/tools/word-counter" data-category="text" data-tool-id="word-counter">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">short_text</span>
+      </div>
+      <h3>Word Counter</h3>
+      <p>Count words, characters, and spaces in your text.</p>
+    </a><a class="tool-card bento-card" href="/tools/meta-desc-checker" data-category="seo" data-tool-id="meta-desc-checker">
+      <span class="card-category-badge" data-cat="seo">SEO</span>
+      <div class="icon-box" style="color: #34D399; background-color: rgba(52, 211, 153, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">subtitles</span>
+      </div>
+      <h3>Meta Description Length Checker</h3>
+      <p>Ensure your meta descriptions are perfectly sized.</p>
+    </a><a class="tool-card bento-card" href="/tools/qr-scanner" data-category="qr" data-tool-id="qr-scanner">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">qr_code_scanner</span>
+      </div>
+      <h3>QR Code Scanner</h3>
+      <p>Scan QR codes using your device camera or selected image.</p>
+    </a><a class="tool-card bento-card" href="/tools/json-validator" data-category="dev" data-tool-id="json-validator">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">fact_check</span>
+      </div>
+      <h3>JSON Validator</h3>
+      <p>Validate your JSON syntax and highlight errors.</p>
+    </a><a class="tool-card bento-card" href="/tools/discount-calculator" data-category="calc" data-tool-id="discount-calculator">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">sell</span>
+      </div>
+      <h3>Discount Calculator</h3>
+      <p>Find out the final price after discount.</p>
+    </a><a class="tool-card bento-card" href="/tools/enneagram-personality-test" data-category="personality" data-tool-id="enneagram-personality-test">
+      <span class="card-category-badge" data-cat="personality">PERSONALITY</span>
+      <div class="icon-box" style="color: #F472B6; background-color: rgba(244, 114, 182, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">diversity_3</span>
+      </div>
+      <h3>Enneagram Test</h3>
+      <p>Discover your dominant Enneagram type (1-9) with this free 45-question test, including your wing and trait balance.</p>
+    </a><a class="tool-card bento-card" href="/tools/typing-speed-test" data-category="productivity" data-tool-id="typing-speed-test">
+      <span class="card-category-badge" data-cat="productivity">PRODUCTIVITY</span>
+      <div class="icon-box" style="color: #FB923C; background-color: rgba(251, 146, 60, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">keyboard</span>
+      </div>
+      <h3>Typing Speed Test</h3>
+      <p>Measure your WPM and accuracy in a timed typing test.</p>
+    </a><a class="tool-card bento-card" href="/tools/jpg-to-png" data-category="image" data-tool-id="jpg-to-png">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">transform</span>
+      </div>
+      <h3>JPG to PNG Converter</h3>
+      <p>Convert JPG to PNG locally for workflows that need PNG output; conversion does not create transparency or restore lost detail.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-compressor" data-category="pdf" data-tool-id="pdf-compressor">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">picture_in_picture</span>
+      </div>
+      <h3>PDF Compressor</h3>
+      <p>Reduce PDF file size locally, then inspect text, signatures, images and page integrity before sharing the output.</p>
+    </a><a class="tool-card bento-card" href="/tools/character-counter" data-category="text" data-tool-id="character-counter">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">spellcheck</span>
+      </div>
+      <h3>Character Counter</h3>
+      <p>Count the exact number of characters in a string.</p>
+    </a><a class="tool-card bento-card" href="/tools/keyword-density" data-category="seo" data-tool-id="keyword-density">
+      <span class="card-category-badge" data-cat="seo">SEO</span>
+      <div class="icon-box" style="color: #34D399; background-color: rgba(52, 211, 153, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">analytics</span>
+      </div>
+      <h3>Keyword Density Checker</h3>
+      <p>Analyze text for keyword usage and density.</p>
+    </a><a class="tool-card bento-card" href="/tools/wifi-qr" data-category="qr" data-tool-id="wifi-qr">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">wifi_tethering</span>
+      </div>
+      <h3>Wi-Fi QR Code Generator</h3>
+      <p>Generate a QR code to easily share your Wi-Fi.</p>
+    </a><a class="tool-card bento-card" href="/tools/json-minifier" data-category="dev" data-tool-id="json-minifier">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">unfold_less</span>
+      </div>
+      <h3>JSON Minifier</h3>
+      <p>Compress JSON strings by removing spaces.</p>
+    </a><a class="tool-card bento-card" href="/tools/profit-margin" data-category="calc" data-tool-id="profit-margin">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">trending_up</span>
+      </div>
+      <h3>Profit Margin Calculator</h3>
+      <p>Calculate gross profit and margin percentages.</p>
+    </a><a class="tool-card bento-card" href="/tools/online-notepad" data-category="productivity" data-tool-id="online-notepad">
+      <span class="card-category-badge" data-cat="productivity">PRODUCTIVITY</span>
+      <div class="icon-box" style="color: #FB923C; background-color: rgba(251, 146, 60, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">edit_note</span>
+      </div>
+      <h3>Online Notepad</h3>
+      <p>A distraction-free notepad that autosaves in your browser.</p>
+    </a><a class="tool-card bento-card" href="/tools/png-to-jpg" data-category="image" data-tool-id="png-to-jpg">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">flip</span>
+      </div>
+      <h3>PNG to JPG Converter</h3>
+      <p>Convert PNG images to JPG for smaller file sizes.</p>
+    </a><a class="tool-card bento-card" href="/tools/images-to-pdf" data-category="pdf" data-tool-id="images-to-pdf">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">collections</span>
+      </div>
+      <h3>Images to PDF</h3>
+      <p>Convert multiple images into a single PDF document.</p>
+    </a><a class="tool-card bento-card" href="/tools/sentence-counter" data-category="text" data-tool-id="sentence-counter">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">notes</span>
+      </div>
+      <h3>Sentence Counter</h3>
+      <p>Count the number of sentences in your text.</p>
+    </a><a class="tool-card bento-card" href="/tools/utm-builder" data-category="seo" data-tool-id="utm-builder">
+      <span class="card-category-badge" data-cat="seo">SEO</span>
+      <div class="icon-box" style="color: #34D399; background-color: rgba(52, 211, 153, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">add_link</span>
+      </div>
+      <h3>UTM Link Builder</h3>
+      <p>Build tracking URLs for Google Analytics campaigns.</p>
+    </a><a class="tool-card bento-card" href="/tools/vcard-qr" data-category="qr" data-tool-id="vcard-qr">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">contact_page</span>
+      </div>
+      <h3>vCard QR Code Generator</h3>
+      <p>Create a digital business card QR code.</p>
+    </a><a class="tool-card bento-card" href="/tools/css-beautifier" data-category="dev" data-tool-id="css-beautifier">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">css</span>
+      </div>
+      <h3>CSS Beautifier</h3>
+      <p>Format and indent CSS code for readability.</p>
+    </a><a class="tool-card bento-card" href="/tools/vat-tax" data-category="calc" data-tool-id="vat-tax">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">receipt_long</span>
+      </div>
+      <h3>VAT/Tax Calculator</h3>
+      <p>Add or remove VAT/Tax amounts from a price.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-to-webp" data-category="image" data-tool-id="image-to-webp">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">auto_fix_high</span>
+      </div>
+      <h3>JPG/PNG to WebP</h3>
+      <p>Convert images to WebP format for fast web delivery.</p>
+    </a><a class="tool-card bento-card" href="/tools/text-to-pdf" data-category="pdf" data-tool-id="text-to-pdf">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">article</span>
+      </div>
+      <h3>Text to PDF Converter</h3>
+      <p>Convert raw text into a downloadable PDF document.</p>
+    </a><a class="tool-card bento-card" href="/tools/case-converter" data-category="text" data-tool-id="case-converter">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">text_fields</span>
+      </div>
+      <h3>Case Converter</h3>
+      <p>Convert text to UPPERCASE, lowercase, Title Case, etc.</p>
+    </a><a class="tool-card bento-card" href="/tools/og-previewer" data-category="seo" data-tool-id="og-previewer">
+      <span class="card-category-badge" data-cat="seo">SEO</span>
+      <div class="icon-box" style="color: #34D399; background-color: rgba(52, 211, 153, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">preview</span>
+      </div>
+      <h3>Open Graph Previewer</h3>
+      <p>Inspect social metadata through a bounded server fetcher, with explicit network, privacy and platform-rendering limitations.</p>
+    </a><a class="tool-card bento-card" href="/tools/whatsapp-link" data-category="qr" data-tool-id="whatsapp-link">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">chat</span>
+      </div>
+      <h3>WhatsApp Chat Link Generator</h3>
+      <p>Create direct click-to-chat WhatsApp links.</p>
+    </a><a class="tool-card bento-card" href="/tools/css-minifier" data-category="dev" data-tool-id="css-minifier">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">compress</span>
+      </div>
+      <h3>CSS Minifier</h3>
+      <p>Minify CSS files to speed up page load times.</p>
+    </a><a class="tool-card bento-card" href="/tools/loan-emi" data-category="calc" data-tool-id="loan-emi">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">account_balance</span>
+      </div>
+      <h3>Loan EMI Calculator</h3>
+      <p>Calculate your monthly loan payments.</p>
+    </a><a class="tool-card bento-card" href="/tools/webp-to-jpg" data-category="image" data-tool-id="webp-to-jpg">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">swap_horiz</span>
+      </div>
+      <h3>WebP to JPG</h3>
+      <p>Convert WebP images back to compatible JPG format.</p>
+    </a><a class="tool-card bento-card" href="/tools/jpg-to-pdf" data-category="pdf" data-tool-id="jpg-to-pdf">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">photo_library</span>
+      </div>
+      <h3>JPG to PDF</h3>
+      <p>Convert a JPG image to a PDF file.</p>
+    </a><a class="tool-card bento-card" href="/tools/remove-extra-spaces" data-category="text" data-tool-id="remove-extra-spaces">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">space_bar</span>
+      </div>
+      <h3>Remove Extra Spaces</h3>
+      <p>Clear out multi-spaces and trailing whitespaces.</p>
+    </a><a class="tool-card bento-card" href="/tools/llms-txt-generator" data-category="seo" data-tool-id="llms-txt-generator">
+      <span class="card-category-badge" data-cat="seo">SEO</span>
+      <div class="icon-box" style="color: #34D399; background-color: rgba(52, 211, 153, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">smart_toy</span>
+      </div>
+      <h3>llms.txt Generator</h3>
+      <p>Generate a spec-compliant llms.txt so AI search engines and LLMs can understand, summarize and cite your website.</p>
+    </a><a class="tool-card bento-card" href="/tools/mailto-link" data-category="qr" data-tool-id="mailto-link">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">mail</span>
+      </div>
+      <h3>Mailto Link Generator</h3>
+      <p>Generate HTML mailto links with subject and body.</p>
+    </a><a class="tool-card bento-card" href="/tools/js-beautifier" data-category="dev" data-tool-id="js-beautifier">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">javascript</span>
+      </div>
+      <h3>JavaScript Beautifier</h3>
+      <p>Format minified JavaScript code cleanly.</p>
+    </a><a class="tool-card bento-card" href="/tools/date-diff" data-category="calc" data-tool-id="date-diff">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">calendar_month</span>
+      </div>
+      <h3>Date Difference Calculator</h3>
+      <p>Calculate the total days between two dates.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-cropper" data-category="image" data-tool-id="image-cropper">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">crop</span>
+      </div>
+      <h3>Image Cropper</h3>
+      <p>Crop your images easily in the browser.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-to-images" data-category="pdf" data-tool-id="pdf-to-images">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">perm_media</span>
+      </div>
+      <h3>PDF to Images</h3>
+      <p>Extract all pages of a PDF into separate images.</p>
+    </a><a class="tool-card bento-card" href="/tools/remove-duplicate-lines" data-category="text" data-tool-id="remove-duplicate-lines">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">filter_list</span>
+      </div>
+      <h3>Remove Duplicate Lines</h3>
+      <p>Filter out duplicate lines from your text lists.</p>
+    </a><a class="tool-card bento-card" href="/tools/ai-crawler-robots-generator" data-category="seo" data-tool-id="ai-crawler-robots-generator">
+      <span class="card-category-badge" data-cat="seo">SEO</span>
+      <div class="icon-box" style="color: #34D399; background-color: rgba(52, 211, 153, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">robot_2</span>
+      </div>
+      <h3>AI Crawler robots.txt Generator</h3>
+      <p>Create a robots.txt that blocks or allows GPTBot, ClaudeBot, PerplexityBot and 20+ AI crawlers - with one-click presets.</p>
+    </a><a class="tool-card bento-card" href="/tools/tel-link" data-category="qr" data-tool-id="tel-link">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">call</span>
+      </div>
+      <h3>Tel Link Generator</h3>
+      <p>Create clickable telephone links for websites.</p>
+    </a><a class="tool-card bento-card" href="/tools/js-minifier" data-category="dev" data-tool-id="js-minifier">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">terminal</span>
+      </div>
+      <h3>JavaScript Minifier</h3>
+      <p>Compress JavaScript code to save bandwidth.</p>
+    </a><a class="tool-card bento-card" href="/tools/age-calculator" data-category="calc" data-tool-id="age-calculator">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">cake</span>
+      </div>
+      <h3>Age Calculator</h3>
+      <p>Calculate your exact age in years, months, and days.</p>
+    </a><a class="tool-card bento-card" href="/tools/profile-picture-maker" data-category="image" data-tool-id="profile-picture-maker">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">account_box</span>
+      </div>
+      <h3>Profile Picture Cropper</h3>
+      <p>Create perfect circular profile pictures for social media.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-rotator" data-category="pdf" data-tool-id="pdf-rotator">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">rotate_right</span>
+      </div>
+      <h3>PDF Page Rotator</h3>
+      <p>Rotate PDF pages permanently.</p>
+    </a><a class="tool-card bento-card" href="/tools/sort-lines" data-category="text" data-tool-id="sort-lines">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">sort_by_alpha</span>
+      </div>
+      <h3>Sort Lines Alphabetically</h3>
+      <p>Sort lines A-Z or Z-A easily.</p>
+    </a><a class="tool-card bento-card" href="/tools/short-link" data-category="qr" data-tool-id="short-link">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">link_sharp</span>
+      </div>
+      <h3>Clean Link Display</h3>
+      <p>Format a readable link label from a valid URL without creating a redirect or sending it to a shortening service.</p>
+    </a><a class="tool-card bento-card" href="/tools/html-beautifier" data-category="dev" data-tool-id="html-beautifier">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">html</span>
+      </div>
+      <h3>HTML Beautifier</h3>
+      <p>Format unstructured HTML code.</p>
+    </a><a class="tool-card bento-card" href="/tools/time-duration" data-category="calc" data-tool-id="time-duration">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">schedule</span>
+      </div>
+      <h3>Time Duration Calculator</h3>
+      <p>Find the duration between two times.</p>
+    </a><a class="tool-card bento-card" href="/tools/passport-photo-maker" data-category="image" data-tool-id="passport-photo-maker">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">badge</span>
+      </div>
+      <h3>2×2 Passport Photo Cropper</h3>
+      <p>Create a centered 600×600 square JPEG for applications that specifically request a 2×2-inch photo at 300 DPI.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-reorder" data-category="pdf" data-tool-id="pdf-reorder">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">reorder</span>
+      </div>
+      <h3>PDF Page Reorder</h3>
+      <p>Change the order of pages within a PDF.</p>
+    </a><a class="tool-card bento-card" href="/tools/reverse-text" data-category="text" data-tool-id="reverse-text">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">swap_horizontal_circle</span>
+      </div>
+      <h3>Reverse Text Tool</h3>
+      <p>Reverse the exact character order of your text.</p>
+    </a><a class="tool-card bento-card" href="/tools/qr-label-maker" data-category="qr" data-tool-id="qr-label-maker">
+      <span class="card-category-badge" data-cat="qr">QR</span>
+      <div class="icon-box" style="color: #818CF8; background-color: rgba(129, 140, 248, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">label</span>
+      </div>
+      <h3>QR Code Label Maker</h3>
+      <p>Design printable labels featuring QR codes.</p>
+    </a><a class="tool-card bento-card" href="/tools/html-minifier" data-category="dev" data-tool-id="html-minifier">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">integration_instructions</span>
+      </div>
+      <h3>HTML Minifier</h3>
+      <p>Minify HTML to save space and load faster.</p>
+    </a><a class="tool-card bento-card" href="/tools/unit-converter" data-category="calc" data-tool-id="unit-converter">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">square_foot</span>
+      </div>
+      <h3>Unit Converter</h3>
+      <p>Convert length, weight, area, and temperature values.</p>
+    </a><a class="tool-card bento-card" href="/tools/gradient-generator-img" data-category="image" data-tool-id="gradient-generator-img">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">gradient</span>
+      </div>
+      <h3>Gradient Generator</h3>
+      <p>Create beautiful gradient backgrounds and save them.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-extractor" data-category="pdf" data-tool-id="pdf-extractor">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">output</span>
+      </div>
+      <h3>PDF Page Extractor</h3>
+      <p>Extract specific pages from your PDF.</p>
+    </a><a class="tool-card bento-card" href="/tools/find-replace-text" data-category="text" data-tool-id="find-replace-text">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">find_replace</span>
+      </div>
+      <h3>Find and Replace Text</h3>
+      <p>Quickly find and replace strings in large texts.</p>
+    </a><a class="tool-card bento-card" href="/tools/regex-tester" data-category="dev" data-tool-id="regex-tester">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">rule</span>
+      </div>
+      <h3>Regex Tester</h3>
+      <p>Test regular expressions against text data.</p>
+    </a><a class="tool-card bento-card" href="/tools/invoice-generator" data-category="calc" data-tool-id="invoice-generator">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">receipt</span>
+      </div>
+      <h3>Invoice Generator</h3>
+      <p>Create and generate fully functional invoice PDFs.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-flip" data-category="image" data-tool-id="image-flip">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">flip_camera_android</span>
+      </div>
+      <h3>Image Flip/Mirror</h3>
+      <p>Flip or mirror your images horizontally and vertically.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-counter" data-category="pdf" data-tool-id="pdf-counter">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">format_list_numbered</span>
+      </div>
+      <h3>PDF Page Counter</h3>
+      <p>Read the page count from a supported PDF in your browser and get a clear error when the document cannot be parsed.</p>
+    </a><a class="tool-card bento-card" href="/tools/text-diff" data-category="text" data-tool-id="text-diff">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">difference</span>
+      </div>
+      <h3>Text Difference Checker</h3>
+      <p>Compare two text blocks to see the differences.</p>
+    </a><a class="tool-card bento-card" href="/tools/uuid-generator" data-category="dev" data-tool-id="uuid-generator">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">fingerprint</span>
+      </div>
+      <h3>UUID Generator</h3>
+      <p>Generate secure Version 4 UUIDs instantly.</p>
+    </a><a class="tool-card bento-card" href="/tools/bmi-calculator" data-category="calc" data-tool-id="bmi-calculator">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">monitor_weight</span>
+      </div>
+      <h3>BMI Calculator</h3>
+      <p>Calculate BMI and your healthy weight range in metric or imperial units.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-watermark" data-category="image" data-tool-id="image-watermark">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">branding_watermark</span>
+      </div>
+      <h3>Image Watermark Tool</h3>
+      <p>Add text watermarks to your images locally.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-metadata-viewer" data-category="pdf" data-tool-id="pdf-metadata-viewer">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">find_in_page</span>
+      </div>
+      <h3>PDF Metadata Viewer</h3>
+      <p>View author, title, and creation data of a PDF.</p>
+    </a><a class="tool-card bento-card" href="/tools/markdown-previewer" data-category="text" data-tool-id="markdown-previewer">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">markdown</span>
+      </div>
+      <h3>Markdown Previewer</h3>
+      <p>Write and preview Markdown syntax in real-time.</p>
+    </a><a class="tool-card bento-card" href="/tools/hash-generator" data-category="dev" data-tool-id="hash-generator">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">tag</span>
+      </div>
+      <h3>Hash Generator</h3>
+      <p>Generate MD5, SHA-1, SHA-256, and SHA-512 hashes.</p>
+    </a><a class="tool-card bento-card" href="/tools/calorie-macro-calculator" data-category="calc" data-tool-id="calorie-macro-calculator">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">local_fire_department</span>
+      </div>
+      <h3>Calorie &amp; Macro Calculator</h3>
+      <p>Estimate daily calories and protein, carb and fat targets from your goals.</p>
+    </a><a class="tool-card bento-card" href="/tools/remove-image-metadata" data-category="image" data-tool-id="remove-image-metadata">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">layers_clear</span>
+      </div>
+      <h3>Remove Image Metadata</h3>
+      <p>Strip EXIF data from images for privacy.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-metadata-remover" data-category="pdf" data-tool-id="pdf-metadata-remover">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">cleaning_services</span>
+      </div>
+      <h3>PDF Metadata Remover</h3>
+      <p>Remove sensitive metadata from PDF files.</p>
+    </a><a class="tool-card bento-card" href="/tools/html-entity-encoder" data-category="text" data-tool-id="html-entity-encoder">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">code_off</span>
+      </div>
+      <h3>HTML Entity Encoder/Decoder</h3>
+      <p>Encode and decode HTML safe entities.</p>
+    </a><a class="tool-card bento-card" href="/tools/password-generator" data-category="dev" data-tool-id="password-generator">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">key</span>
+      </div>
+      <h3>Password Generator</h3>
+      <p>Create secure, highly randomized passwords.</p>
+    </a><a class="tool-card bento-card" href="/tools/tip-calculator" data-category="calc" data-tool-id="tip-calculator">
+      <span class="card-category-badge" data-cat="calc">CALC</span>
+      <div class="icon-box" style="color: #FBBF24; background-color: rgba(251, 191, 36, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">restaurant</span>
+      </div>
+      <h3>Tip Calculator</h3>
+      <p>Split a bill, choose a tip percentage and see the total per person.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-metadata-viewer" data-category="image" data-tool-id="image-metadata-viewer">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">info</span>
+      </div>
+      <h3>Image Metadata Viewer</h3>
+      <p>View EXIF and metadata information of an image.</p>
+    </a><a class="tool-card bento-card" href="/tools/add-page-numbers" data-category="pdf" data-tool-id="add-page-numbers">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">numbers</span>
+      </div>
+      <h3>Add Page Numbers to PDF</h3>
+      <p>Automatically insert page numbers into your PDF.</p>
+    </a><a class="tool-card bento-card" href="/tools/url-encoder" data-category="text" data-tool-id="url-encoder">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">link_off</span>
+      </div>
+      <h3>URL Encoder/Decoder</h3>
+      <p>Safely encode and decode URL strings.</p>
+    </a><a class="tool-card bento-card" href="/tools/color-converter" data-category="dev" data-tool-id="color-converter">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">tune</span>
+      </div>
+      <h3>Color Converter</h3>
+      <p>Convert colors between HEX, RGB, HSL, and CMYK.</p>
+    </a><a class="tool-card bento-card" href="/tools/blur-face" data-category="image" data-tool-id="blur-face">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">blur_on</span>
+      </div>
+      <h3>Blur Face / Blur Area</h3>
+      <p>Blur parts of an image to hide sensitive information.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-lock" data-category="pdf" data-tool-id="pdf-lock">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">lock</span>
+      </div>
+      <h3>PDF Lock Tool</h3>
+      <p>Add password-based PDF encryption locally, then verify viewer compatibility and store the password through a separate secure channel.</p>
+    </a><a class="tool-card bento-card" href="/tools/base64-encoder" data-category="text" data-tool-id="base64-encoder">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">password</span>
+      </div>
+      <h3>Base64 Encoder/Decoder</h3>
+      <p>Convert text or data to and from Base64.</p>
+    </a><a class="tool-card bento-card" href="/tools/css-gradient" data-category="dev" data-tool-id="css-gradient">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">gradient</span>
+      </div>
+      <h3>CSS Gradient Generator</h3>
+      <p>Build and export CSS gradient code visually.</p>
+    </a><a class="tool-card bento-card" href="/tools/pixelate-image" data-category="image" data-tool-id="pixelate-image">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">grid_on</span>
+      </div>
+      <h3>Pixelate Image</h3>
+      <p>Apply a pixelation effect to any image.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-text-extractor" data-category="pdf" data-tool-id="pdf-text-extractor">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">description</span>
+      </div>
+      <h3>PDF Text Extractor</h3>
+      <p>Extract plain text content from a PDF document.</p>
+    </a><a class="tool-card bento-card" href="/tools/slug-generator" data-category="text" data-tool-id="slug-generator">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">link</span>
+      </div>
+      <h3>Slug Generator</h3>
+      <p>Convert any title into a URL-friendly slug.</p>
+    </a><a class="tool-card bento-card" href="/tools/box-shadow" data-category="dev" data-tool-id="box-shadow">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">shadow</span>
+      </div>
+      <h3>Box Shadow Generator</h3>
+      <p>Create CSS drop shadows with visual controls.</p>
+    </a><a class="tool-card bento-card" href="/tools/color-picker-image" data-category="image" data-tool-id="color-picker-image">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">colorize</span>
+      </div>
+      <h3>Color Picker from Image</h3>
+      <p>Extract exact colors from any part of an selected image.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-form-filler" data-category="pdf" data-tool-id="pdf-form-filler">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">edit_note</span>
+      </div>
+      <h3>PDF Form Filler</h3>
+      <p>Fill out interactive PDF forms directly in the browser.</p>
+    </a><a class="tool-card bento-card" href="/tools/read-time-calculator" data-category="text" data-tool-id="read-time-calculator">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">timer</span>
+      </div>
+      <h3>Read Time Calculator</h3>
+      <p>Estimate how long it will take to read an article.</p>
+    </a><a class="tool-card bento-card" href="/tools/border-radius" data-category="dev" data-tool-id="border-radius">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">rounded_corner</span>
+      </div>
+      <h3>Border Radius Generator</h3>
+      <p>Generate complex CSS border-radius shapes.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-palette" data-category="image" data-tool-id="image-palette">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">palette</span>
+      </div>
+      <h3>Image Palette Generator</h3>
+      <p>Generate a color palette automatically from a photo.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-signature" data-category="pdf" data-tool-id="pdf-signature">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">draw</span>
+      </div>
+      <h3>PDF Signature Tool</h3>
+      <p>Add your digital signature or drawing to a PDF.</p>
+    </a><a class="tool-card bento-card" href="/tools/lorem-ipsum" data-category="text" data-tool-id="lorem-ipsum">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">format_quote</span>
+      </div>
+      <h3>Lorem Ipsum Generator</h3>
+      <p>Generate dummy text for your projects.</p>
+    </a><a class="tool-card bento-card" href="/tools/css-clamp" data-category="dev" data-tool-id="css-clamp">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">straighten</span>
+      </div>
+      <h3>CSS Clamp Generator</h3>
+      <p>Calculate fluid typography clamp() functions.</p>
+    </a><a class="tool-card bento-card" href="/tools/grayscale-image" data-category="image" data-tool-id="grayscale-image">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">filter_b_and_w</span>
+      </div>
+      <h3>Grayscale Image</h3>
+      <p>Convert colored images into black and white.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-watermark" data-category="pdf" data-tool-id="pdf-watermark">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">branding_watermark</span>
+      </div>
+      <h3>PDF Watermark Tool</h3>
+      <p>Add a text watermark across your PDF pages.</p>
+    </a><a class="tool-card bento-card" href="/tools/readability-checker" data-category="text" data-tool-id="readability-checker">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">menu_book</span>
+      </div>
+      <h3>Readability Checker</h3>
+      <p>Score your text with Flesch-Kincaid, Gunning Fog, SMOG and more.</p>
+    </a><a class="tool-card bento-card" href="/tools/flexbox-play" data-category="dev" data-tool-id="flexbox-play">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">dashboard_customize</span>
+      </div>
+      <h3>Flexbox Playground</h3>
+      <p>Learn and test CSS Flexbox layouts.</p>
+    </a><a class="tool-card bento-card" href="/tools/bg-color-changer" data-category="image" data-tool-id="bg-color-changer">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">format_color_fill</span>
+      </div>
+      <h3>Image BG Color Changer</h3>
+      <p>Change the background color of images.</p>
+    </a><a class="tool-card bento-card" href="/tools/pdf-to-zip" data-category="pdf" data-tool-id="pdf-to-zip">
+      <span class="card-category-badge" data-cat="pdf">PDF</span>
+      <div class="icon-box" style="color: #FB7185; background-color: rgba(251, 113, 133, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">folder_zip</span>
+      </div>
+      <h3>PDF to ZIP Image Pack</h3>
+      <p>Convert PDF to images and pack them in a ZIP archive.</p>
+    </a><a class="tool-card bento-card" href="/tools/text-to-speech" data-category="text" data-tool-id="text-to-speech">
+      <span class="card-category-badge" data-cat="text">TEXT</span>
+      <div class="icon-box" style="color: #EAB308; background-color: rgba(234, 179, 8, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">record_voice_over</span>
+      </div>
+      <h3>Text to Speech</h3>
+      <p>Read text aloud with adjustable voice, speed, pitch and volume.</p>
+    </a><a class="tool-card bento-card" href="/tools/css-grid" data-category="dev" data-tool-id="css-grid">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">grid_view</span>
+      </div>
+      <h3>CSS Grid Generator</h3>
+      <p>Design CSS grid layouts and export code.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-to-url" data-category="image" data-tool-id="image-to-url">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">add_to_photos</span>
+      </div>
+      <h3>Image to URL</h3>
+      <p>Generate local blob and data URLs for development and embedding; no image hosting or public share link is created.</p>
+    </a><a class="tool-card bento-card" href="/tools/sql-formatter" data-category="dev" data-tool-id="sql-formatter">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">database</span>
+      </div>
+      <h3>SQL Formatter</h3>
+      <p>Format and beautify SQL queries.</p>
+    </a><a class="tool-card bento-card" href="/tools/image-to-base64" data-category="image" data-tool-id="image-to-base64">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">raw_on</span>
+      </div>
+      <h3>Image to Base64</h3>
+      <p>Convert image files into Base64 strings.</p>
+    </a><a class="tool-card bento-card" href="/tools/json-to-csv" data-category="dev" data-tool-id="json-to-csv">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">schema</span>
+      </div>
+      <h3>JSON to CSV Converter</h3>
+      <p>Convert JSON data to CSV format.</p>
+    </a><a class="tool-card bento-card" href="/tools/color-palette-generator" data-category="image" data-tool-id="color-palette-generator">
+      <span class="card-category-badge" data-cat="image">IMAGE</span>
+      <div class="icon-box" style="color: #60A5FA; background-color: rgba(96, 165, 250, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">palette</span>
+      </div>
+      <h3>Color Palette Generator</h3>
+      <p>Generate harmonious color palettes and copy HEX, CSS or JSON values.</p>
+    </a><a class="tool-card bento-card" href="/tools/llm-token-counter" data-category="dev" data-tool-id="llm-token-counter">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">token</span>
+      </div>
+      <h3>LLM Token Counter &amp; Cost Estimator</h3>
+      <p>Estimate text token usage and cost for planning; verify exact billing with the target model tokenizer and current provider pricing.</p>
+    </a><a class="tool-card bento-card" href="/tools/jwt-decoder" data-category="dev" data-tool-id="jwt-decoder">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">key</span>
+      </div>
+      <h3>JWT Decoder</h3>
+      <p>Decode JWT header and payload claims, check expiry and verify HS256 signatures.</p>
+    </a><a class="tool-card bento-card" href="/tools/unix-timestamp-converter" data-category="dev" data-tool-id="unix-timestamp-converter">
+      <span class="card-category-badge" data-cat="dev">DEV</span>
+      <div class="icon-box" style="color: #06B6D4; background-color: rgba(6, 182, 212, 0.12);">
+        <span class="material-symbols-outlined" style="font-size: 26px;">schedule</span>
+      </div>
+      <h3>Unix Timestamp Converter</h3>
+      <p>Convert Unix timestamps to dates and dates to seconds or milliseconds.</p>
+    </a>
+    </div>
+    <div id="search-no-results" style="display:none; text-align: center; padding: 3rem; color: var(--text-muted);">
+      No tools found matching your search.
+    </div>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-features-row">
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #8B5CF6;">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <div class="feature-title">Free Core Tools</div>
+        <div class="feature-sub">No fee for core tool use.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #06B6D4;">
+          <span class="material-symbols-outlined">shield_lock</span>
+        </div>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-sub">Files stay on your device.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #F43F5E;">
+          <span class="material-symbols-outlined">no_accounts</span>
+        </div>
+        <div class="feature-title">No Registration</div>
+        <div class="feature-sub">Start using instantly.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #EAB308;">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <div class="feature-title">Lightning Fast</div>
+        <div class="feature-sub">Client-side processing.</div>
+      </div>
+    </div>
+
+    <div class="footer-line-divider"></div>
+
+    <div class="footer-main-row">
+      <div class="footer-brand-side">
+        <h3 class="footer-brand-name">100ToolCrate</h3>
+        <p class="footer-brand-desc">
+          Precision built utilities for the modern web.<br>
+          Free core tools. Local-first processing.
+        </p>
+        <div class="footer-brand-copyright">
+          © 2026 100ToolCrate.
+        </div>
+      </div>
+
+      <div class="footer-columns-side">
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">NAVIGATION</span>
+          <a href="/">Home</a>
+          <a href="/tools">All Tools</a>
+          <a href="/workflows">Workflows</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/advertise">Advertise</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">FOR BUILDERS</span>
+          <a href="/agents">AI agent API & MCP</a>
+          <a href="/services">Done-for-you services</a>
+          <a href="/advertise">Sponsorships</a>
+          <a href="/editorial-policy">Editorial policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">PLATFORM</span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <button type="button" class="pwa-install-link" data-ad-choices>
+            <span class="material-symbols-outlined" aria-hidden="true">ad_group</span>
+            Ad choices
+          </button>
+          <button type="button" class="pwa-install-link" data-pwa-install>
+            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+            Install app
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js?v=2026-11-10-v88-agent-growth" defer></script>
+
+  <script src="/assets/js/search.js?v=2026-11-10-v88-agent-growth" defer></script>
+</body>
+</html>

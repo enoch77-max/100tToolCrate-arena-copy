@@ -1,0 +1,27 @@
+[Unit]
+Description=Verified 100ToolCrate SQLite backup
+After=100toolcrate.service
+Requires=100toolcrate.service
+
+[Service]
+Type=oneshot
+User=__APP_USER__
+Group=__APP_USER__
+WorkingDirectory=__APP_DIR__
+Environment=NODE_ENV=production
+EnvironmentFile=__ENV_FILE__
+ExecStart=__NODE_BIN__ backend/scripts/backup.js
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+ReadWritePaths=__APP_DIR__/data __APP_DIR__/backups
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=100toolcrate-backup

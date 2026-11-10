@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='43' y='10' width='14' height='40' rx='2' fill='%2306b6d4'/><polygon points='50,95 5,70 5,35 50,60' fill='%230a2a5e'/><polygon points='50,95 95,70 95,35 50,60' fill='%230a2a5e'/></svg>">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+<link rel="api-catalog" href="/.well-known/api-catalog">
+<link rel="service-doc" href="/docs/api">
+<meta name="theme-color" content="#0B0E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="100ToolCrate">
+<meta name="msvalidate.01" content="ABE9D58FD670A809B29645CC7CCA575E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=2026-11-10-v88-agent-growth">
+<script>window.TC_ADSENSE_CLIENT="ca-pub-5986395187107423";</script>
+<script src="/assets/js/monetization.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/theme.js?v=2026-11-10-v88-agent-growth"></script>
+<script src="/assets/js/pwa.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/webmcp.js?v=2026-11-10-v88-agent-growth" defer></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6aa3328b8b2c4002bbcc18d0f5215960"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <title>Calorie &amp; Macro Calculator: TDEE, BMR &amp; Daily Targets</title>
+  <meta name="description" content="Estimate BMR, maintenance calories, a goal-adjusted daily target and protein, carb and fat macros with the Mifflin-St Jeor equation.">
+  <meta property="og:title" content="Calorie &amp; Macro Calculator: TDEE, BMR &amp; Daily Targets">
+  <meta property="og:description" content="Estimate BMR, maintenance calories, a goal-adjusted daily target and protein, carb and fat macros with the Mifflin-St Jeor equation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://100toolcrate.com/tools/calorie-macro-calculator">
+  <meta property="og:site_name" content="100ToolCrate">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calorie &amp; Macro Calculator: TDEE, BMR &amp; Daily Targets">
+  <meta name="twitter:description" content="Estimate BMR, maintenance calories, a goal-adjusted daily target and protein, carb and fat macros with the Mifflin-St Jeor equation.">
+  <link rel="canonical" href="https://100toolcrate.com/tools/calorie-macro-calculator">
+  <script type="application/ld+json">
+  [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calorie & Macro Calculator",
+    "description": "Estimate BMR, maintenance calories, a goal-adjusted daily target and protein, carb and fat macros with the Mifflin-St Jeor equation.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "url": "https://100toolcrate.com/tools/calorie-macro-calculator",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://100toolcrate.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://100toolcrate.com/tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Calorie & Macro Calculator",
+        "item": "https://100toolcrate.com/tools/calorie-macro-calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How are daily calories calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The tool uses the Mifflin-St Jeor equation to estimate BMR, multiplies it by an activity factor to estimate maintenance calories, then applies the surplus or deficit for your selected goal. One kilogram of body weight is roughly equivalent to 7,700 kcal, so a 0.5 kg weekly loss implies about a 500 kcal daily deficit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which macro split should I choose?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Balanced (30% protein, 40% carbs, 30% fat) is a reasonable default for most people. High protein can help with satiety and muscle retention during a deficit, lower carb can suit preference or blood-sugar management, and lower fat can help with high-volume eating. The best split is one you can sustain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this calculator medical advice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. It is an educational estimate, not a prescription. Medical conditions, medication, pregnancy and a history of disordered eating all change what is appropriate. Consult a qualified professional for personalised advice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my calorie target below 1,200 or 1,500 kcal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "That usually happens with a small body size, a low activity level or an aggressive deficit. The tool shows a warning because very low intakes can make it hard to meet nutrient needs. Choose a smaller deficit or seek professional guidance."
+        }
+      }
+    ]
+  }
+]
+  </script>
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="site-nav" aria-label="Primary">
+  <div class="nav-wrapper">
+    <div class="nav-brand-group">
+      <a href="/" class="logo-text">
+        100ToolCrate
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-controls="nav-categories-menu" id="nav-categories-btn">
+          Categories <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content" id="nav-categories-menu" role="group" aria-labelledby="nav-categories-btn">
+          <a href="/tools?cat=image">Image Tools</a>
+          <a href="/tools?cat=dev">Dev Tools</a>
+          <a href="/tools?cat=pdf">PDF Utilities</a>
+          <a href="/tools?cat=text">Text Tools</a>
+          <a href="/tools?cat=calc">Calculators</a>
+          <a href="/tools?cat=productivity">Productivity</a>
+          <a href="/tools?cat=qr">QR Tools</a>
+          <a href="/tools?cat=seo">SEO Tools</a>
+          <a href="/tools?cat=personality">Personality Tests</a>
+        </div>
+      </div>
+      <a href="/workflows">Workflows</a>
+      <a href="/services">Services</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+        <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+      </button>
+      <button class="menu-toggle" aria-label="Open sidebar navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-label="Site navigation sidebar" inert>
+  <div class="sidebar-header">
+    <a href="/" class="logo-text" style="font-size: 1.15rem;">100ToolCrate</a>
+    <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+      <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+    </button>
+  </div>
+  <div class="sidebar-content">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <div class="sidebar-section-title">Navigation</div>
+      <a href="/" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">home</span>
+        Home
+      </a>
+      <a href="/tools" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+        Popular
+      </a>
+      <a href="/workflows" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">checklist</span>
+        Workflows
+      </a>
+      <a href="/blog" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+        Blog
+      </a>
+      <a href="/about" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">info</span>
+        About
+      </a>
+      <a href="/contact" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+        Contact
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section-title">Categories</div>
+
+      <a href="/tools" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F8FAFC;flex-shrink:0;"></span>
+        All Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">122</span>
+      </a>
+      <a href="/tools?cat=image" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#60A5FA;flex-shrink:0;"></span>
+        Image Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">23</span>
+      </a>
+      <a href="/tools?cat=dev" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#06B6D4;flex-shrink:0;"></span>
+        Dev Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">25</span>
+      </a>
+      <a href="/tools?cat=pdf" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB7185;flex-shrink:0;"></span>
+        PDF Utilities
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=text" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#EAB308;flex-shrink:0;"></span>
+        Text Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=calc" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0;"></span>
+        Calculators
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">13</span>
+      </a>
+      <a href="/tools?cat=productivity" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB923C;flex-shrink:0;"></span>
+        Productivity
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">3</span>
+      </a>
+      <a href="/tools?cat=qr" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#818CF8;flex-shrink:0;"></span>
+        QR Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">9</span>
+      </a>
+      <a href="/tools?cat=seo" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;"></span>
+        SEO Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">7</span>
+      </a>
+      <a href="/tools?cat=personality" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F472B6;flex-shrink:0;"></span>
+        Personality Tests
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">2</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="/privacy-policy" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">policy</span>
+        Privacy Policy
+      </a>
+      <a href="/terms" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">gavel</span>
+        Terms of Service
+      </a>
+      <a href="/disclaimer" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+        Disclaimer
+      </a>
+    </nav>
+  </div>
+</aside>
+
+  <main class="main-content tool-page" id="main-content" tabindex="-1">
+    <div class="tool-topline">
+      <a id="nav-back-btn" class="nav-back-btn" href="/" aria-label="Go back to parent page" style="display: none;">
+        <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+        <span class="back-text">Back</span>
+      </a>
+      <nav class="breadcrumb-nav tool-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/tools?cat=calc">Calculators</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Calorie &amp; Macro Calculator</span>
+      </nav>
+    </div>
+
+    <header class="tool-head">
+      <div class="tool-head-icon" style="color: #FBBF24; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3);">
+        <span class="material-symbols-outlined">local_fire_department</span>
+      </div>
+      <div class="tool-head-copy">
+        <div class="tool-head-titleline">
+          <h1 class="tool-header-title">Calorie &amp; Macro Calculator</h1>
+          <span class="tool-kicker" style="color: #FBBF24; border-color: rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.12);">CALC</span>
+        </div>
+        <p class="tool-header-desc">Estimate daily calories and protein, carb and fat targets from your goals.</p>
+      </div>
+      <span class="tool-head-meta">
+        <span class="material-symbols-outlined">shield_lock</span>
+        Private &amp; on-device
+      </span>
+    </header>
+
+    <section class="tool-workspace-panel" aria-label="Calorie &amp; Macro Calculator workspace">
+      <div class="workspace-topbar">
+        <div class="workspace-eyebrow">
+          <span class="workspace-live-dot" aria-hidden="true"></span>
+          Live workspace
+        </div>
+        <div class="workspace-tools">
+          <span class="workspace-status" id="tool-status" role="status" aria-live="polite" data-state="loading">Preparing&hellip;</span>
+          <button type="button" class="tool-copy-btn" id="tool-copy-link">
+            <span class="material-symbols-outlined">link</span>
+            <span class="tool-copy-label">Copy link</span>
+          </button>
+          <button type="button" class="workspace-reset" id="tool-reset-btn" title="Reset this tool">
+            <span class="material-symbols-outlined">restart_alt</span>
+            Reset
+          </button>
+        </div>
+      </div>
+      <div id="tool-app-container" class="tool-workspace" data-tool-id="calorie-macro-calculator" data-category="Calc" data-title="Calorie &amp; Macro Calculator" data-ui-template="tool-ui-2026-11-10-trending">
+        <div class="tool-skeleton" aria-hidden="true">
+          <div class="tool-skeleton-line" style="width: 42%;"></div>
+          <div class="tool-skeleton-block"></div>
+          <div class="tool-skeleton-line" style="width: 68%;"></div>
+        </div>
+      </div>
+      <div class="workspace-footnote">
+        <span class="material-symbols-outlined">lock</span>
+        Your files and text are processed in this browser and never uploaded.
+      </div>
+    </section>
+
+    <section class="tool-info-card" aria-label="About this tool">
+
+      <div class="tool-section-head">
+        <span class="tool-section-kicker">In-depth guide</span>
+        <h2>About Calorie &amp; Macro Calculator</h2>
+      </div>
+      <div class="tool-authored-content"><h2>Calorie & Macro Calculator: Build a Daily Target</h2><p>This calculator estimates your basal metabolic rate (BMR), maintenance calories (TDEE) and a goal-adjusted daily calorie target. It then splits that target into protein, carbohydrate and fat grams using a macro ratio you choose. Enter your sex, age, height, weight, activity level and goal in metric or imperial units.</p><p>The estimate uses the Mifflin-St Jeor equation, one of the most widely used BMR formulas, multiplied by an activity factor. Real energy needs vary with genetics, training history, sleep, medication and how accurately portions are measured, so treat the result as a starting point and adjust based on two to four weeks of real-world results.</p><h2>Safety and Accuracy</h2><p>Very low calorie targets can be unsafe without supervision. The tool warns when a target falls below common minimums, but it cannot account for medical conditions, pregnancy or eating disorders. Speak to a registered dietitian or clinician before making large dietary changes.</p></div>
+
+
+
+    </section>
+
+    <section class="tool-faq-card" id="faq" aria-label="Frequently asked questions">
+      <div class="tool-section-head">
+        <span class="tool-section-kicker">Answers</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="tool-faq-list">
+        <details class="tool-faq-item"><summary class="tool-faq-question"><span>How are daily calories calculated?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">The tool uses the Mifflin-St Jeor equation to estimate BMR, multiplies it by an activity factor to estimate maintenance calories, then applies the surplus or deficit for your selected goal. One kilogram of body weight is roughly equivalent to 7,700 kcal, so a 0.5 kg weekly loss implies about a 500 kcal daily deficit.</p></details><details class="tool-faq-item"><summary class="tool-faq-question"><span>Which macro split should I choose?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">Balanced (30% protein, 40% carbs, 30% fat) is a reasonable default for most people. High protein can help with satiety and muscle retention during a deficit, lower carb can suit preference or blood-sugar management, and lower fat can help with high-volume eating. The best split is one you can sustain.</p></details><details class="tool-faq-item"><summary class="tool-faq-question"><span>Is this calculator medical advice?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">No. It is an educational estimate, not a prescription. Medical conditions, medication, pregnancy and a history of disordered eating all change what is appropriate. Consult a qualified professional for personalised advice.</p></details><details class="tool-faq-item"><summary class="tool-faq-question"><span>Why is my calorie target below 1,200 or 1,500 kcal?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">That usually happens with a small body size, a low activity level or an aggressive deficit. The tool shows a warning because very low intakes can make it hard to meet nutrient needs. Choose a smaller deficit or seek professional guidance.</p></details>
+      </div>
+    </section>
+
+    <div class="tool-support-grid">
+      <section class="tool-support-card" aria-label="Quick tips">
+        <h2>Quick tips</h2>
+        <ul class="tool-tips-list">
+          <li>Results recalculate instantly as you change any value.</li><li>Use the reset action to start a fresh calculation.</li><li>Check the units and currency before relying on a result.</li>
+        </ul>
+      </section>
+
+    <section class="tool-support-card tool-related-card" aria-label="Related tools">
+      <h2>Related tools</h2>
+      <div class="tool-related-list">
+
+      <a class="tool-related-item" href="/tools/invoice-generator">
+        <span class="tool-related-icon" style="color: #FBBF24; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3);">
+          <span class="material-symbols-outlined">receipt</span>
+        </span>
+        <span class="tool-related-copy">
+          <strong>Invoice Generator</strong>
+          <small>Create and generate fully functional invoice PDFs.</small>
+        </span>
+        <span class="material-symbols-outlined tool-related-arrow" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a class="tool-related-item" href="/tools/bmi-calculator">
+        <span class="tool-related-icon" style="color: #FBBF24; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3);">
+          <span class="material-symbols-outlined">monitor_weight</span>
+        </span>
+        <span class="tool-related-copy">
+          <strong>BMI Calculator</strong>
+          <small>Calculate BMI and your healthy weight range in metric or imperial units.</small>
+        </span>
+        <span class="material-symbols-outlined tool-related-arrow" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a class="tool-related-item" href="/tools/tip-calculator">
+        <span class="tool-related-icon" style="color: #FBBF24; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3);">
+          <span class="material-symbols-outlined">restaurant</span>
+        </span>
+        <span class="tool-related-copy">
+          <strong>Tip Calculator</strong>
+          <small>Split a bill, choose a tip percentage and see the total per person.</small>
+        </span>
+        <span class="material-symbols-outlined tool-related-arrow" aria-hidden="true">chevron_right</span>
+      </a>
+
+      <a class="tool-related-item" href="/tools/percentage-calculator">
+        <span class="tool-related-icon" style="color: #FBBF24; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3);">
+          <span class="material-symbols-outlined">percent</span>
+        </span>
+        <span class="tool-related-copy">
+          <strong>Percentage Calculator</strong>
+          <small>Calculate percentages easily and accurately.</small>
+        </span>
+        <span class="material-symbols-outlined tool-related-arrow" aria-hidden="true">chevron_right</span>
+      </a>
+
+      </div>
+      <a class="tool-related-all" href="/tools?cat=calc">
+        View all Calculators
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+      </a>
+    </section>
+
+    </div>
+
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-features-row">
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #8B5CF6;">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <div class="feature-title">Free Core Tools</div>
+        <div class="feature-sub">No fee for core tool use.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #06B6D4;">
+          <span class="material-symbols-outlined">shield_lock</span>
+        </div>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-sub">Files stay on your device.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #F43F5E;">
+          <span class="material-symbols-outlined">no_accounts</span>
+        </div>
+        <div class="feature-title">No Registration</div>
+        <div class="feature-sub">Start using instantly.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #EAB308;">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <div class="feature-title">Lightning Fast</div>
+        <div class="feature-sub">Client-side processing.</div>
+      </div>
+    </div>
+
+    <div class="footer-line-divider"></div>
+
+    <div class="footer-main-row">
+      <div class="footer-brand-side">
+        <h3 class="footer-brand-name">100ToolCrate</h3>
+        <p class="footer-brand-desc">
+          Precision built utilities for the modern web.<br>
+          Free core tools. Local-first processing.
+        </p>
+        <div class="footer-brand-copyright">
+          © 2026 100ToolCrate.
+        </div>
+      </div>
+
+      <div class="footer-columns-side">
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">NAVIGATION</span>
+          <a href="/">Home</a>
+          <a href="/tools">All Tools</a>
+          <a href="/workflows">Workflows</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/advertise">Advertise</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">FOR BUILDERS</span>
+          <a href="/agents">AI agent API & MCP</a>
+          <a href="/services">Done-for-you services</a>
+          <a href="/advertise">Sponsorships</a>
+          <a href="/editorial-policy">Editorial policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">PLATFORM</span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <button type="button" class="pwa-install-link" data-ad-choices>
+            <span class="material-symbols-outlined" aria-hidden="true">ad_group</span>
+            Ad choices
+          </button>
+          <button type="button" class="pwa-install-link" data-pwa-install>
+            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+            Install app
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js?v=2026-11-10-v88-agent-growth" defer></script>
+
+  <script src="/assets/js/tools-logic.js?v=2026-11-10-v88-agent-growth" defer></script>
+</body>
+</html>

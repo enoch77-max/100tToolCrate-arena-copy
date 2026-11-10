@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='43' y='10' width='14' height='40' rx='2' fill='%2306b6d4'/><polygon points='50,95 5,70 5,35 50,60' fill='%230a2a5e'/><polygon points='50,95 95,70 95,35 50,60' fill='%230a2a5e'/></svg>">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+<link rel="api-catalog" href="/.well-known/api-catalog">
+<link rel="service-doc" href="/docs/api">
+<meta name="theme-color" content="#0B0E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="100ToolCrate">
+<meta name="msvalidate.01" content="ABE9D58FD670A809B29645CC7CCA575E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=2026-11-10-v88-agent-growth">
+<script>window.TC_ADSENSE_CLIENT="ca-pub-5986395187107423";</script>
+<script src="/assets/js/monetization.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/theme.js?v=2026-11-10-v88-agent-growth"></script>
+<script src="/assets/js/pwa.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/webmcp.js?v=2026-11-10-v88-agent-growth" defer></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6aa3328b8b2c4002bbcc18d0f5215960"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <title>How to Debug a JSON API Response: Validate, Format, Inspect</title>
+  <meta name="description" content="Isolate malformed JSON, locate syntax errors, inspect token claims safely, and turn nested response data into a reviewable CSV.">
+  <meta property="og:title" content="How to Debug a JSON API Response: Validate, Format, Inspect">
+  <meta property="og:description" content="Isolate malformed JSON, locate syntax errors, inspect token claims safely, and turn nested response data into a reviewable CSV.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://100toolcrate.com/workflows/debug-json-api-response">
+  <meta property="og:site_name" content="100ToolCrate">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://100toolcrate.com/workflows/debug-json-api-response">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://100toolcrate.com/workflows/debug-json-api-response",
+      "url": "https://100toolcrate.com/workflows/debug-json-api-response",
+      "name": "How to Debug a JSON API Response: Validate, Format, Inspect",
+      "description": "Isolate malformed JSON, locate syntax errors, inspect token claims safely, and turn nested response data into a reviewable CSV.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "100ToolCrate",
+        "url": "https://100toolcrate.com/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://100toolcrate.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Workflows",
+          "item": "https://100toolcrate.com/workflows"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "JSON API debugging",
+          "item": "https://100toolcrate.com/workflows/debug-json-api-response"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Debug a JSON API response methodically",
+      "description": "Isolate malformed JSON, locate syntax errors, inspect token claims safely, and turn nested response data into a reviewable CSV.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Validate the payload before reading values",
+          "text": "Paste the raw response body exactly as received. If validation fails, fix transport issues such as an HTML error page or truncated body before investigating your data model. Do not paste surrounding log timestamps. Check for HTML returned by a proxy or login page",
+          "url": "https://100toolcrate.com/tools/json-validator"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Format it to reveal structure",
+          "text": "Indent the valid payload and inspect nesting, null values, and arrays with unexpected lengths. Compare the actual keys with the names your application reads, including capitalization. Look for strings where numbers are expected. Check whether the payload is wrapped in a data property",
+          "url": "https://100toolcrate.com/tools/json-formatter"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Inspect JWT claims when authentication is involved",
+          "text": "If the API uses a bearer token, decode it locally to inspect issuer, audience, and expiry claims. Decoding is not signature verification; a readable token is not automatically trustworthy. Compare exp with the current time. Never treat client-side decoding as authorization",
+          "url": "https://100toolcrate.com/tools/jwt-decoder"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Export records for comparison",
+          "text": "When the issue affects many records, convert a suitable JSON array to CSV. Sort or filter the export in your spreadsheet to spot missing fields and inconsistent values across the response set. Use a representative record set. Flattening nested objects may require a simpler input projection",
+          "url": "https://100toolcrate.com/tools/json-to-csv"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "JSON Validator"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "JSON Formatter"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "JWT Decoder"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "JSON to CSV Converter"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does valid JSON still break my application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syntax validity and schema compatibility are different. The payload can be valid while containing different keys, types, nesting, or nullability than your code expects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can these tools tell me why an API returned 401?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They can help inspect the body and token claims, but the server decides authorization. Also check the request headers, token audience, scopes, clock skew, and environment configuration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to paste tokens into this workflow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The decoder runs locally, but the safest debugging practice is still to use short-lived test tokens and revoke production credentials that were exposed anywhere."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="site-nav" aria-label="Primary">
+  <div class="nav-wrapper">
+    <div class="nav-brand-group">
+      <a href="/" class="logo-text">
+        100ToolCrate
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-controls="nav-categories-menu" id="nav-categories-btn">
+          Categories <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content" id="nav-categories-menu" role="group" aria-labelledby="nav-categories-btn">
+          <a href="/tools?cat=image">Image Tools</a>
+          <a href="/tools?cat=dev">Dev Tools</a>
+          <a href="/tools?cat=pdf">PDF Utilities</a>
+          <a href="/tools?cat=text">Text Tools</a>
+          <a href="/tools?cat=calc">Calculators</a>
+          <a href="/tools?cat=productivity">Productivity</a>
+          <a href="/tools?cat=qr">QR Tools</a>
+          <a href="/tools?cat=seo">SEO Tools</a>
+          <a href="/tools?cat=personality">Personality Tests</a>
+        </div>
+      </div>
+      <a href="/workflows">Workflows</a>
+      <a href="/services">Services</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+        <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+      </button>
+      <button class="menu-toggle" aria-label="Open sidebar navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-label="Site navigation sidebar" inert>
+  <div class="sidebar-header">
+    <a href="/" class="logo-text" style="font-size: 1.15rem;">100ToolCrate</a>
+    <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+      <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+    </button>
+  </div>
+  <div class="sidebar-content">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <div class="sidebar-section-title">Navigation</div>
+      <a href="/" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">home</span>
+        Home
+      </a>
+      <a href="/tools" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+        Popular
+      </a>
+      <a href="/workflows" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">checklist</span>
+        Workflows
+      </a>
+      <a href="/blog" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+        Blog
+      </a>
+      <a href="/about" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">info</span>
+        About
+      </a>
+      <a href="/contact" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+        Contact
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section-title">Categories</div>
+
+      <a href="/tools" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F8FAFC;flex-shrink:0;"></span>
+        All Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">122</span>
+      </a>
+      <a href="/tools?cat=image" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#60A5FA;flex-shrink:0;"></span>
+        Image Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">23</span>
+      </a>
+      <a href="/tools?cat=dev" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#06B6D4;flex-shrink:0;"></span>
+        Dev Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">25</span>
+      </a>
+      <a href="/tools?cat=pdf" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB7185;flex-shrink:0;"></span>
+        PDF Utilities
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=text" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#EAB308;flex-shrink:0;"></span>
+        Text Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=calc" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0;"></span>
+        Calculators
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">13</span>
+      </a>
+      <a href="/tools?cat=productivity" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB923C;flex-shrink:0;"></span>
+        Productivity
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">3</span>
+      </a>
+      <a href="/tools?cat=qr" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#818CF8;flex-shrink:0;"></span>
+        QR Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">9</span>
+      </a>
+      <a href="/tools?cat=seo" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;"></span>
+        SEO Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">7</span>
+      </a>
+      <a href="/tools?cat=personality" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F472B6;flex-shrink:0;"></span>
+        Personality Tests
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">2</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="/privacy-policy" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">policy</span>
+        Privacy Policy
+      </a>
+      <a href="/terms" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">gavel</span>
+        Terms of Service
+      </a>
+      <a href="/disclaimer" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+        Disclaimer
+      </a>
+    </nav>
+  </div>
+</aside>
+
+  <main class="main-content" id="main-content" tabindex="-1" data-workflow-slug="debug-json-api-response">
+    <nav class="breadcrumb-nav tool-breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 1.25rem;"><a href="/">Home</a><span class="breadcrumb-sep" aria-hidden="true">/</span><a href="/workflows">Workflows</a><span class="breadcrumb-sep" aria-hidden="true">/</span><span class="breadcrumb-current" aria-current="page">JSON API debugging</span></nav>
+    <header class="workflow-hero">
+      <div>
+        <span class="workflow-eyebrow">Dev workflow · 4 checked steps</span>
+        <h1>Debug a JSON API response methodically</h1>
+        <p>Isolate malformed JSON, locate syntax errors, inspect token claims safely, and turn nested response data into a reviewable CSV.</p>
+      </div>
+      <div class="workflow-hero-meta">
+        <div class="workflow-meta-item"><small>Time needed</small><strong>About 10 minutes</strong></div>
+        <div class="workflow-meta-item"><small>Useful for</small><strong>Developers, QA engineers, analysts, and anyone inspecting API output</strong></div>
+      </div>
+    </header>
+    <section class="workflow-progress-panel" aria-label="Workflow progress">
+      <div class="workflow-progress-top"><strong id="workflow-progress-text">0 of 4 steps complete</strong><span class="workflow-save-status" id="workflow-save-status" role="status">Saved only on this device</span></div>
+      <div class="workflow-progress-track" role="progressbar" aria-label="Completed steps" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="workflow-progress-bar" id="workflow-progress-bar"></div></div>
+      <div class="workflow-progress-actions"><span class="workflow-save-status">Open each tool in a new tab, then mark the step done when the output is checked.</span><button class="workflow-reset" id="workflow-reset" type="button"><span class="material-symbols-outlined" aria-hidden="true">restart_alt</span>Reset progress</button></div>
+    </section>
+    <div class="workflow-intro"><p>A blank screen or generic parsing error does not tell you whether the API returned invalid JSON, an unexpected schema, or an authentication problem. Separate those possibilities instead of changing application code at random.</p>
+<p>Copy a minimal failing response and remove secrets before sharing it. These checks run locally, but redaction is still important when you later attach examples to tickets or issue trackers.</p></div>
+
+    <section class="workflow-step-list" aria-label="Workflow steps">
+        <article class="workflow-step-card" id="step-1">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">1</span>
+            <h2>Validate the payload before reading values</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="0" aria-label="Mark step 1 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>Paste the raw response body exactly as received. If validation fails, fix transport issues such as an HTML error page or truncated body before investigating your data model.</p>
+            <ul class="workflow-settings"><li>Do not paste surrounding log timestamps</li><li>Check for HTML returned by a proxy or login page</li></ul>
+            <a class="workflow-tool-link" href="/tools/json-validator" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Validate response JSON<span class="sr-only"> using JSON Validator (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: JSON Validator · Validate your JSON syntax and highlight errors.</div>
+          </div>
+        </article>
+
+        <article class="workflow-step-card" id="step-2">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">2</span>
+            <h2>Format it to reveal structure</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="1" aria-label="Mark step 2 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>Indent the valid payload and inspect nesting, null values, and arrays with unexpected lengths. Compare the actual keys with the names your application reads, including capitalization.</p>
+            <ul class="workflow-settings"><li>Look for strings where numbers are expected</li><li>Check whether the payload is wrapped in a data property</li></ul>
+            <a class="workflow-tool-link" href="/tools/json-formatter" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Format the payload<span class="sr-only"> using JSON Formatter (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: JSON Formatter · Format and beautify ugly JSON strings.</div>
+          </div>
+        </article>
+
+        <article class="workflow-step-card" id="step-3">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">3</span>
+            <h2>Inspect JWT claims when authentication is involved</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="2" aria-label="Mark step 3 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>If the API uses a bearer token, decode it locally to inspect issuer, audience, and expiry claims. Decoding is not signature verification; a readable token is not automatically trustworthy.</p>
+            <ul class="workflow-settings"><li>Compare exp with the current time</li><li>Never treat client-side decoding as authorization</li></ul>
+            <a class="workflow-tool-link" href="/tools/jwt-decoder" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Inspect token claims<span class="sr-only"> using JWT Decoder (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: JWT Decoder · Decode JWT header and payload claims, check expiry and verify HS256 signatures.</div>
+          </div>
+        </article>
+
+        <article class="workflow-step-card" id="step-4">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">4</span>
+            <h2>Export records for comparison</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="3" aria-label="Mark step 4 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>When the issue affects many records, convert a suitable JSON array to CSV. Sort or filter the export in your spreadsheet to spot missing fields and inconsistent values across the response set.</p>
+            <ul class="workflow-settings"><li>Use a representative record set</li><li>Flattening nested objects may require a simpler input projection</li></ul>
+            <a class="workflow-tool-link" href="/tools/json-to-csv" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Convert records to CSV<span class="sr-only"> using JSON to CSV Converter (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: JSON to CSV Converter · Convert JSON data to CSV format.</div>
+          </div>
+        </article></section>
+    <button class="workflow-share" type="button" data-share-workflow><span class="material-symbols-outlined" aria-hidden="true">share</span><span data-share-label>Share workflow</span></button>
+    <div class="workflow-two-col">
+      <section class="workflow-info-card"><h2>Mistakes to avoid</h2><div class="workflow-mistake"><strong>Formatting before checking the response type</strong><p>A formatted HTML error page is still not JSON. Confirm status, content type, and raw body first.</p></div><div class="workflow-mistake"><strong>Trusting decoded JWT content</strong><p>JWT payloads are encoded, not encrypted. Signature validation belongs in the relying service with the correct key and algorithm restrictions.</p></div><div class="workflow-mistake"><strong>Posting production secrets publicly</strong><p>Local processing reduces exposure but does not redact access tokens, personal data, or session identifiers in screenshots and bug reports.</p></div></section>
+      <section class="workflow-info-card"><h2>Frequently asked questions</h2><div class="tool-faq-list"><details class="tool-faq-item"><summary class="tool-faq-question"><span>Why does valid JSON still break my application?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">Syntax validity and schema compatibility are different. The payload can be valid while containing different keys, types, nesting, or nullability than your code expects.</p></details>
+<details class="tool-faq-item"><summary class="tool-faq-question"><span>Can these tools tell me why an API returned 401?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">They can help inspect the body and token claims, but the server decides authorization. Also check the request headers, token audience, scopes, clock skew, and environment configuration.</p></details>
+<details class="tool-faq-item"><summary class="tool-faq-question"><span>Is it safe to paste tokens into this workflow?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">The decoder runs locally, but the safest debugging practice is still to use short-lived test tokens and revoke production credentials that were exposed anywhere.</p></details></div></section>
+    </div>
+    <section class="workflow-related-section"><div class="section-header"><h2>Related workflows</h2><a class="section-link" href="/workflows">View all</a></div><div class="workflow-home-grid">
+    <a class="workflow-card" href="/workflows/website-handoff-assets" data-workflow-card="website-handoff-assets" data-category="Dev" data-step-count="4">
+      <span class="workflow-card-icon" aria-hidden="true"><span class="material-symbols-outlined">deployed_code</span></span>
+      <span class="workflow-card-category">Dev workflow</span>
+      <h3>Website handoff package</h3>
+      <p>Format working source files, create minified delivery assets, optimize images, and generate checksums for a reproducible website handoff.</p>
+      <span class="workflow-card-footer"><span>4 steps · About 15 minutes</span><span class="workflow-card-progress" data-card-progress>Open workflow →</span></span>
+    </a>
+
+    <a class="workflow-card" href="/workflows/launch-page-seo-check" data-workflow-card="launch-page-seo-check" data-category="SEO" data-step-count="4">
+      <span class="workflow-card-icon" aria-hidden="true"><span class="material-symbols-outlined">travel_explore</span></span>
+      <span class="workflow-card-category">SEO workflow</span>
+      <h3>Pre-launch SEO check</h3>
+      <p>Check a page&#39;s slug, search snippet, social preview, content focus, and crawler rules before you publish or request indexing.</p>
+      <span class="workflow-card-footer"><span>4 steps · About 15 minutes per page</span><span class="workflow-card-progress" data-card-progress>Open workflow →</span></span>
+    </a>
+  </div></section>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-features-row">
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #8B5CF6;">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <div class="feature-title">Free Core Tools</div>
+        <div class="feature-sub">No fee for core tool use.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #06B6D4;">
+          <span class="material-symbols-outlined">shield_lock</span>
+        </div>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-sub">Files stay on your device.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #F43F5E;">
+          <span class="material-symbols-outlined">no_accounts</span>
+        </div>
+        <div class="feature-title">No Registration</div>
+        <div class="feature-sub">Start using instantly.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #EAB308;">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <div class="feature-title">Lightning Fast</div>
+        <div class="feature-sub">Client-side processing.</div>
+      </div>
+    </div>
+
+    <div class="footer-line-divider"></div>
+
+    <div class="footer-main-row">
+      <div class="footer-brand-side">
+        <h3 class="footer-brand-name">100ToolCrate</h3>
+        <p class="footer-brand-desc">
+          Precision built utilities for the modern web.<br>
+          Free core tools. Local-first processing.
+        </p>
+        <div class="footer-brand-copyright">
+          © 2026 100ToolCrate.
+        </div>
+      </div>
+
+      <div class="footer-columns-side">
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">NAVIGATION</span>
+          <a href="/">Home</a>
+          <a href="/tools">All Tools</a>
+          <a href="/workflows">Workflows</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/advertise">Advertise</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">FOR BUILDERS</span>
+          <a href="/agents">AI agent API & MCP</a>
+          <a href="/services">Done-for-you services</a>
+          <a href="/advertise">Sponsorships</a>
+          <a href="/editorial-policy">Editorial policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">PLATFORM</span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <button type="button" class="pwa-install-link" data-ad-choices>
+            <span class="material-symbols-outlined" aria-hidden="true">ad_group</span>
+            Ad choices
+          </button>
+          <button type="button" class="pwa-install-link" data-pwa-install>
+            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+            Install app
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js?v=2026-11-10-v88-agent-growth" defer></script>
+
+  <script src="/assets/js/workflows.js?v=2026-11-10-v88-agent-growth" defer></script>
+</body>
+</html>

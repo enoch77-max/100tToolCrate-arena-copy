@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Offline - 100ToolCrate</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B0E14">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0B0E14;
+      --surface: #111722;
+      --border: #202A3A;
+      --text: #E8EDF6;
+      --muted: #96A2B8;
+      --primary: #3B82F6;
+      --primary-hover: #2563EB;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
+      padding: 2rem 1.25rem calc(2rem + env(safe-area-inset-bottom, 0px));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+    }
+
+    .offline-card {
+      width: 100%;
+      max-width: 540px;
+      padding: 2rem 1.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .offline-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: var(--bg);
+    }
+
+    h1 {
+      margin: 1.1rem 0 0.5rem;
+      font-size: clamp(1.5rem, 5vw, 1.9rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 auto 1.25rem;
+      max-width: 40ch;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .offline-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .offline-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.6rem 1.1rem;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+    }
+
+    .offline-btn-primary {
+      background: #2563EB;
+      color: #FFFFFF;
+    }
+
+    .offline-btn-primary:hover { background: #1D4ED8; }
+
+    .offline-btn-ghost {
+      border-color: var(--border);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .offline-btn-ghost:hover { border-color: var(--muted); }
+
+    .offline-subhead {
+      margin: 0 0 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .offline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .offline-links a {
+      display: inline-block;
+      padding: 0.45rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .offline-links a:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .offline-note {
+      margin: 1.5rem 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      .offline-card { padding: 1.6rem 1.1rem; }
+      .offline-btn { flex: 1 1 100%; }
+    }
+  </style>
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+</head>
+<body>
+  <main class="offline-card">
+    <img class="offline-icon" src="/assets/pwa/icon-192.png" width="72" height="72" alt="100ToolCrate">
+    <h1>You're offline</h1>
+    <p>The connection dropped. Your cached app shell and supported browser tools can still open; reconnect for uncached pages and server APIs.</p>
+    <div class="offline-actions">
+      <a class="offline-btn offline-btn-primary" href="/">Try again</a>
+      <a class="offline-btn offline-btn-ghost" href="/tools">Open tools</a>
+    </div>
+    <p class="offline-subhead">Available in the cached app shell</p>
+    <ul class="offline-links">
+      <li><a href="/tools/image-compressor">Image Compressor</a></li>
+      <li><a href="/tools/word-counter">Word Counter</a></li>
+      <li><a href="/tools/json-formatter">JSON Formatter</a></li>
+      <li><a href="/tools/pomodoro-timer">Pomodoro Timer</a></li>
+      <li><a href="/tools/online-notepad">Notepad</a></li>
+    </ul>
+    <p class="offline-note">Browser tools process locally. Server execution APIs and new pages require a connection.</p>
+  </main>
+</body>
+</html>

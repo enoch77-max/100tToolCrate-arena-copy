@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Allow: /api/openapi.json
+Allow: /api/v1/tools
+Allow: /.well-known/
+Allow: /manifest.json
+Allow: /metadata.json
+Disallow: /backend/
+Disallow: /data/
+Disallow: /backups/
+Disallow: /scripts/
+Disallow: /content/
+Disallow: /deploy/
+Disallow: /node_modules/
+Disallow: /generator.js
+Disallow: /server.js
+Disallow: /tools.json
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /*.json$
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Sitemap: https://100toolcrate.com/sitemap.xml

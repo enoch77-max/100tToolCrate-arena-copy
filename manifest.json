@@ -1,0 +1,98 @@
+{
+  "name": "100ToolCrate - 120+ Free Online Tools",
+  "short_name": "100ToolCrate",
+  "description": "Free browser utilities for images, PDFs, text, developers, SEO and calculations, plus a public execution API. The cached app shell and supported tools work offline.",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["utilities", "productivity"],
+  "background_color": "#0B0E14",
+  "theme_color": "#0B0E14",
+  "prefer_related_applications": false,
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "icons": [
+    {
+      "src": "/assets/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/pwa/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/pwa/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/pwa/monochrome-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/pwa/screenshot-narrow.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Browse every tool from the app"
+    },
+    {
+      "src": "/assets/pwa/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "All 122 tools in one workspace"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Image Compressor",
+      "short_name": "Compress Image",
+      "description": "Compress JPG, PNG and WebP images in the app.",
+      "url": "/tools/image-compressor",
+      "icons": [{ "src": "/assets/pwa/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "PDF Merger",
+      "short_name": "Merge PDFs",
+      "description": "Combine PDF files without uploading them.",
+      "url": "/tools/pdf-merger",
+      "icons": [{ "src": "/assets/pwa/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Pomodoro Timer",
+      "short_name": "Focus Timer",
+      "description": "Start a 25 minute focus session.",
+      "url": "/tools/pomodoro-timer",
+      "icons": [{ "src": "/assets/pwa/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Word Counter",
+      "short_name": "Word Count",
+      "description": "Count words and characters instantly.",
+      "url": "/tools/word-counter",
+      "icons": [{ "src": "/assets/pwa/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='43' y='10' width='14' height='40' rx='2' fill='%2306b6d4'/><polygon points='50,95 5,70 5,35 50,60' fill='%230a2a5e'/><polygon points='50,95 95,70 95,35 50,60' fill='%230a2a5e'/></svg>">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+  <meta name="theme-color" content="#0B0E14">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="100ToolCrate">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-11-10-v88-agent-growth">
+  <script src="/assets/js/theme.js?v=2026-11-10-v88-agent-growth"></script>
+  <script src="/assets/js/pwa.js?v=2026-11-10-v88-agent-growth" defer></script>
+
+  <title>Blog - 100ToolCrate</title>
+  <meta name="description" content="Read the latest articles, tutorials, and guides about online utilities, productivity, and web development from 100ToolCrate.">
+  <link rel="canonical" href="https://100toolcrate.com/blog">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://100toolcrate.com/blog">
+  <meta property="og:title" content="Blog - 100ToolCrate">
+  <meta property="og:description" content="Read the latest articles, tutorials, and guides about online utilities, productivity, and web development from 100ToolCrate.">
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<script>window.TC_ADSENSE_CLIENT="ca-pub-5986395187107423";</script>
+<script src="/assets/js/monetization.js?v=2026-11-10-v88-agent-growth" defer></script>
+</head>
+<body class="site-body">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="site-nav">
+    <div class="nav-wrapper">
+      <div class="nav-brand-group">
+        <a href="/" class="logo-text">100ToolCrate</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/tools">Popular</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-controls="nav-categories-menu" id="nav-categories-btn">
+            Categories <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+          </button>
+          <div class="nav-dropdown-content" id="nav-categories-menu" role="menu" aria-labelledby="nav-categories-btn">
+            <a href="/tools?cat=image">Image Tools</a>
+            <a href="/tools?cat=pdf">PDF Tools</a>
+            <a href="/tools?cat=text">Text Tools</a>
+            <a href="/tools?cat=seo">SEO Tools</a>
+            <a href="/tools?cat=qr">QR Tools</a>
+            <a href="/tools?cat=dev">Dev Tools</a>
+            <a href="/tools?cat=calc">Calculators</a>
+            <a href="/tools?cat=personality">Personality Tests</a>
+          </div>
+        </div>
+        <a href="/workflows">Workflows</a>
+        <a href="/blog" class="active">Blog</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a id="headerSearchBtn" href="/tools" aria-label="Search tools" class="theme-toggle-btn">
+          <span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+        </a>
+        <button id="themeToggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+          <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+        </button>
+        <button class="menu-toggle" aria-label="Open sidebar navigation">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar Drawer -->
+  <aside class="sidebar-drawer" id="sidebarDrawer" aria-label="Site navigation sidebar">
+    <div class="sidebar-header">
+      <a href="/" class="logo-text" style="font-size: 1.15rem;">100ToolCrate</a>
+      <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+        <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+      </button>
+    </div>
+    <div class="sidebar-content">
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <div class="sidebar-section-title">Navigation</div>
+        <a href="/" class="sidebar-link">
+          <span class="material-symbols-outlined" style="font-size: 20px;">home</span>
+          Home
+        </a>
+        <a href="/tools.html" class="sidebar-link">
+          <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+          Popular
+        </a>
+        <a href="/blog" class="sidebar-link">
+          <span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+          Blog
+        </a>
+        <a href="/about" class="sidebar-link">
+          <span class="material-symbols-outlined" style="font-size: 20px;">info</span>
+          About
+        </a>
+        <a href="/contact" class="sidebar-link">
+          <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+          Contact
+        </a>
+
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section-title">Categories</div>
+
+        <a href="/tools.html" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#F8FAFC;flex-shrink:0;"></span>
+          All Tools
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">107</span>
+        </a>
+        <a href="/tools?cat=image" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#8B5CF6;flex-shrink:0;"></span>
+          Image Tools
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">22</span>
+        </a>
+        <a href="/tools?cat=dev" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#06B6D4;flex-shrink:0;"></span>
+          Dev Tools
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">22</span>
+        </a>
+        <a href="/tools?cat=pdf" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#FB7185;flex-shrink:0;"></span>
+          PDF Utilities
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">21</span>
+        </a>
+        <a href="/tools?cat=text" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#EAB308;flex-shrink:0;"></span>
+          Text Tools
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">18</span>
+        </a>
+        <a href="/tools?cat=calc" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0;"></span>
+          Calculators
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">10</span>
+        </a>
+        <a href="/tools?cat=qr" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#818CF8;flex-shrink:0;"></span>
+          QR Tools
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">9</span>
+        </a>
+        <a href="/tools?cat=seo" class="sidebar-sublink">
+          <span style="width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;"></span>
+          SEO Tools
+          <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">5</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <a href="/privacy-policy" class="sidebar-sublink">
+          <span class="material-symbols-outlined" style="font-size: 18px;">policy</span>
+          Privacy Policy
+        </a>
+        <a href="/terms" class="sidebar-sublink">
+          <span class="material-symbols-outlined" style="font-size: 18px;">gavel</span>
+          Terms of Service
+        </a>
+        <a href="/disclaimer" class="sidebar-sublink">
+          <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+          Disclaimer
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="blog-main-wrap" id="main-content" tabindex="-1">
+    <!-- Featured Hero Article -->
+    
+    <a href="/blog/json-formatting-validation-guide" class="blog-featured-hero">
+      <div class="blog-hero-image-wrap">
+        <div class="blog-hero-image" style="background-image: url('/assets/blog/json_developer_blog.png');"></div>
+        <div class="blog-hero-overlay"></div>
+      </div>
+      <div class="blog-hero-content">
+        <div class="blog-chip-row">
+          <span class="blog-chip chip-emerald">FEATURED</span>
+          <span class="blog-date-text">2026-07-21</span>
+        </div>
+        <h1 class="blog-hero-title">Developer Cheat Sheet: Formatting, Validating, and Minifying JSON for Production</h1>
+        <p class="blog-hero-excerpt">Master JSON data handling with practical tips on syntax validation, payload minification, and debugging complex nested API structures.</p>
+        <span class="blog-hero-link">
+          Read Article <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+        </span>
+      </div>
+    </a>
+  
+
+    <!-- Category Filter Bar -->
+    <section class="blog-filter-bar">
+      
+    <button class="blog-filter-btn active" data-category="all">All Posts</button>
+  
+    <button class="blog-filter-btn " data-category="SEO">SEO</button>
+  
+    <button class="blog-filter-btn " data-category="Guides">Guides</button>
+  
+    <button class="blog-filter-btn " data-category="Web Performance">Web Performance</button>
+  
+    <button class="blog-filter-btn " data-category="PDF Tools">PDF Tools</button>
+  
+    <button class="blog-filter-btn " data-category="Image Tools">Image Tools</button>
+  
+    <button class="blog-filter-btn " data-category="Dev Tools">Dev Tools</button>
+  
+    <button class="blog-filter-btn " data-category="SEO Tools">SEO Tools</button>
+  
+    </section>
+
+    <!-- Post Cards Grid -->
+    <section class="blog-posts-grid" id="blogPostsGrid">
+      
+    <a href="/blog/merge-pdf-files-safely" class="blog-card-item" data-category="Guides">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/pdf_security_blog.png');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-violet">Guides</span>
+          <span class="blog-date-text">2026-07-21</span>
+        </div>
+        <h3 class="blog-card-item-title">How to Merge PDF Files Safely Without Uploading Sensitive Data to Remote Servers</h3>
+        <p class="blog-card-item-excerpt">Discover why server-side PDF tools pose privacy risks and how browser-based client-side PDF merging protects your confidential documents.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    <a href="/blog/utm-building-link-tracking-guide" class="blog-card-item" data-category="SEO">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/utm_marketing_blog.png');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-emerald">SEO</span>
+          <span class="blog-date-text">2026-07-21</span>
+        </div>
+        <h3 class="blog-card-item-title">The Complete UTM Building &amp; Link Tracking Guide for Digital Marketers in 2026</h3>
+        <p class="blog-card-item-excerpt">Master campaign link tracking with UTM parameters, prevent broken analytics attribution, and learn best practices for clean campaign URLs.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    <a href="/blog/optimize-images-2026" class="blog-card-item" data-category="Web Performance">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/optimize_images_blog.png');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-emerald">Web Performance</span>
+          <span class="blog-date-text">2026-07-11</span>
+        </div>
+        <h3 class="blog-card-item-title">The Ultimate Guide to Optimizing Images for Web Performance in 2026</h3>
+        <p class="blog-card-item-excerpt">Learn how to optimize your images for Core Web Vitals, speed up your website, and improve SEO using modern formats like WebP and AVIF.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    <a href="/blog/how-to-compress-pdfs" class="blog-card-item" data-category="PDF Tools">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/compress_pdf_blog.jpg');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-violet">PDF Tools</span>
+          <span class="blog-date-text">2026-06-07</span>
+        </div>
+        <h3 class="blog-card-item-title">How to Compress PDFs While Preserving Readable Output for Free</h3>
+        <p class="blog-card-item-excerpt">Learn how to significantly reduce your PDF file size without sacrificing image or text quality using our free browser-based PDF compressor.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    <a href="/blog/resizing-images-social-media" class="blog-card-item" data-category="Image Tools">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/resize_images_blog.jpg');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-emerald">Image Tools</span>
+          <span class="blog-date-text">2026-06-06</span>
+        </div>
+        <h3 class="blog-card-item-title">The Ultimate Guide to Resizing Images for Social Media</h3>
+        <p class="blog-card-item-excerpt">Stop getting your photos cropped awkwardly by Instagram and Twitter. Learn the perfect image dimensions and how to easily resize them online.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    <a href="/blog/json-vs-csv" class="blog-card-item" data-category="Dev Tools">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/json_vs_csv_blog.jpg');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-cyan">Dev Tools</span>
+          <span class="blog-date-text">2026-06-05</span>
+        </div>
+        <h3 class="blog-card-item-title">JSON vs CSV: When and How to Convert Between Them</h3>
+        <p class="blog-card-item-excerpt">Understand the key differences between JSON and CSV data formats, and learn when you should use each format for your web development projects.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    <a href="/blog/protect-pdf-passwords" class="blog-card-item" data-category="PDF Tools">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/protect_pdf_blog.jpg');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-violet">PDF Tools</span>
+          <span class="blog-date-text">2026-06-04</span>
+        </div>
+        <h3 class="blog-card-item-title">How to Protect Sensitive PDF Documents with Passwords</h3>
+        <p class="blog-card-item-excerpt">Ensure your financial records and personal documents remain secure by locking your PDF files with military-grade encryption.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    <a href="/blog/strong-meta-descriptions" class="blog-card-item" data-category="SEO Tools">
+      <div class="blog-card-thumb-wrap">
+        <div class="blog-card-thumb" style="background-image: url('/assets/blog/meta_desc_blog.jpg');"></div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-top-row">
+          <span class="blog-chip chip-emerald">SEO Tools</span>
+          <span class="blog-date-text">2026-06-03</span>
+        </div>
+        <h3 class="blog-card-item-title">Why Your Website Needs a Strong Meta Description</h3>
+        <p class="blog-card-item-excerpt">Discover how a simple 150-character meta description can drastically improve your click-through rates and SEO rankings on Google.</p>
+        <span class="blog-card-read-link">
+          Read More <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 4px;">north_east</span>
+        </span>
+      </div>
+    </a>
+  
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-features-row">
+        <div class="footer-feature-item">
+          <span class="material-symbols-outlined feature-icon" style="color: #8B5CF6;">bolt</span>
+          <span class="feature-title">Free Core Tools</span>
+          <span class="feature-sub">No hidden subscriptions</span>
+        </div>
+        <div class="footer-feature-item">
+          <span class="material-symbols-outlined feature-icon" style="color: #06B6D4;">shield</span>
+          <span class="feature-title">Privacy First</span>
+          <span class="feature-sub">Client-side execution</span>
+        </div>
+        <div class="footer-feature-item">
+          <span class="material-symbols-outlined feature-icon" style="color: #F43F5E;">verified_user</span>
+          <span class="feature-title">No Registration</span>
+          <span class="feature-sub">Instant access to tools</span>
+        </div>
+        <div class="footer-feature-item">
+          <span class="material-symbols-outlined feature-icon" style="color: #EAB308;">speed</span>
+          <span class="feature-title">Lightning Fast</span>
+          <span class="feature-sub">Optimized performance</span>
+        </div>
+      </div>
+
+      <div class="footer-line-divider"></div>
+
+      <div class="footer-main-row">
+        <div class="footer-brand-side">
+          <span class="footer-brand-name">100ToolCrate</span>
+          <p class="footer-brand-desc">
+            Precision built utilities for the modern web. Over 100+ high performance online tools for developers, designers, and digital creators.
+          </p>
+          <span class="footer-brand-copyright">© 2026 100ToolCrate.</span>
+        </div>
+
+        <div class="footer-columns-side">
+          <div class="footer-nav-col">
+            <span class="footer-col-heading">NAVIGATION</span>
+            <a href="/">Home</a>
+            <a href="/tools.html">All Tools</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact</a>
+          </div>
+
+          <div class="footer-nav-col">
+            <span class="footer-col-heading">ALTERNATIVES</span>
+            <a href="/alternatives/smallseotools-alternative">SmallSEOTools</a>
+            <a href="/alternatives/ilovepdf-alternative">iLovePDF</a>
+            <a href="/alternatives/10015-io-alternative">10015.io</a>
+            <a href="/alternatives/tinywow-alternative">TinyWow</a>
+          </div>
+
+          <div class="footer-nav-col">
+            <span class="footer-col-heading">PLATFORM</span>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/disclaimer">Disclaimer</a>
+            <button type="button" class="pwa-install-link" data-ad-choices><span class="material-symbols-outlined" aria-hidden="true">ad_group</span>Ad choices</button>
+          <button type="button" class="pwa-install-link" data-pwa-install>
+              <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+              Install app
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2026-11-10-v88-agent-growth" defer></script>
+  <script>
+    // Blog Category Filter Script
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.blog-filter-btn');
+      const postCards = document.querySelectorAll('.blog-card-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const targetCategory = btn.getAttribute('data-category');
+          postCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (targetCategory === 'all' || cardCat === targetCategory) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

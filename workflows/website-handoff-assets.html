@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='43' y='10' width='14' height='40' rx='2' fill='%2306b6d4'/><polygon points='50,95 5,70 5,35 50,60' fill='%230a2a5e'/><polygon points='50,95 95,70 95,35 50,60' fill='%230a2a5e'/></svg>">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon.png">
+<link rel="api-catalog" href="/.well-known/api-catalog">
+<link rel="service-doc" href="/docs/api">
+<meta name="theme-color" content="#0B0E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="100ToolCrate">
+<meta name="msvalidate.01" content="ABE9D58FD670A809B29645CC7CCA575E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=2026-11-10-v88-agent-growth">
+<script>window.TC_ADSENSE_CLIENT="ca-pub-5986395187107423";</script>
+<script src="/assets/js/monetization.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/theme.js?v=2026-11-10-v88-agent-growth"></script>
+<script src="/assets/js/pwa.js?v=2026-11-10-v88-agent-growth" defer></script>
+<script src="/assets/js/webmcp.js?v=2026-11-10-v88-agent-growth" defer></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6aa3328b8b2c4002bbcc18d0f5215960"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <title>Website Launch Handoff: Minify CSS, JS, HTML and Optimize Images</title>
+  <meta name="description" content="Format working source files, create minified delivery assets, optimize images, and generate checksums for a reproducible website handoff.">
+  <meta property="og:title" content="Website Launch Handoff: Minify CSS, JS, HTML and Optimize Images">
+  <meta property="og:description" content="Format working source files, create minified delivery assets, optimize images, and generate checksums for a reproducible website handoff.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://100toolcrate.com/workflows/website-handoff-assets">
+  <meta property="og:site_name" content="100ToolCrate">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://100toolcrate.com/workflows/website-handoff-assets">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://100toolcrate.com/workflows/website-handoff-assets",
+      "url": "https://100toolcrate.com/workflows/website-handoff-assets",
+      "name": "Website Launch Handoff: Minify CSS, JS, HTML and Optimize Images",
+      "description": "Format working source files, create minified delivery assets, optimize images, and generate checksums for a reproducible website handoff.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "100ToolCrate",
+        "url": "https://100toolcrate.com/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://100toolcrate.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Workflows",
+          "item": "https://100toolcrate.com/workflows"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Website handoff package",
+          "item": "https://100toolcrate.com/workflows/website-handoff-assets"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Prepare a lean website handoff package",
+      "description": "Format working source files, create minified delivery assets, optimize images, and generate checksums for a reproducible website handoff.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Normalize the readable source",
+          "text": "Format CSS before reviewing it so inconsistent indentation does not hide accidental overrides. Commit or save this readable version as the maintenance source before producing a minified counterpart. Resolve lint and browser issues first. Preserve required license comments",
+          "url": "https://100toolcrate.com/tools/css-beautifier"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Create production CSS and JavaScript",
+          "text": "Minify copies of the tested assets and compare behavior in the actual site. A smaller file is not a successful build if it removes something your runtime or third-party integration expects. Keep source and output in separate directories. Test the minified output, not only the source",
+          "url": "https://100toolcrate.com/tools/css-minifier"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Optimize image assets",
+          "text": "Resize images for their layout and compress the exports before packaging them. Avoid recompressing an already optimized asset every time you prepare a handoff. Use descriptive, stable filenames. Check transparent images and icons visually",
+          "url": "https://100toolcrate.com/tools/image-compressor"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Generate integrity checksums",
+          "text": "Create hashes for the final archive or key deliverables so the recipient can detect accidental changes or incomplete transfers. Record the algorithm and hash alongside the exact filename. Hash the final file after all edits. A checksum detects changes; it does not prove who created the file",
+          "url": "https://100toolcrate.com/tools/hash-generator"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "CSS Beautifier"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "CSS Minifier"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Image Compressor"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Hash Generator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I minify HTML, CSS, and JavaScript manually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a small static handoff it can be useful. Ongoing projects are usually safer with a reproducible build pipeline that also handles source maps, hashing, and tests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What belongs in a complete handoff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Readable source, production assets, setup instructions, dependency and license information, environment-variable examples without secrets, deployment notes, and a verified archive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why include a checksum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It lets the recipient verify that a specific file matches the delivered bytes. It is useful for transfer verification, but it is not a replacement for signed releases."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="alternate" type="application/rss+xml" title="100ToolCrate Blog" href="/feed.xml" data-growth-rss>
+<meta property="og:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+<meta name="twitter:image" content="https://100toolcrate.com/assets/pwa/screenshot-wide.png">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="site-nav" aria-label="Primary">
+  <div class="nav-wrapper">
+    <div class="nav-brand-group">
+      <a href="/" class="logo-text">
+        100ToolCrate
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-controls="nav-categories-menu" id="nav-categories-btn">
+          Categories <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+        </button>
+        <div class="nav-dropdown-content" id="nav-categories-menu" role="group" aria-labelledby="nav-categories-btn">
+          <a href="/tools?cat=image">Image Tools</a>
+          <a href="/tools?cat=dev">Dev Tools</a>
+          <a href="/tools?cat=pdf">PDF Utilities</a>
+          <a href="/tools?cat=text">Text Tools</a>
+          <a href="/tools?cat=calc">Calculators</a>
+          <a href="/tools?cat=productivity">Productivity</a>
+          <a href="/tools?cat=qr">QR Tools</a>
+          <a href="/tools?cat=seo">SEO Tools</a>
+          <a href="/tools?cat=personality">Personality Tests</a>
+        </div>
+      </div>
+      <a href="/workflows">Workflows</a>
+      <a href="/services">Services</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+        <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+      </button>
+      <button class="menu-toggle" aria-label="Open sidebar navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-label="Site navigation sidebar" inert>
+  <div class="sidebar-header">
+    <a href="/" class="logo-text" style="font-size: 1.15rem;">100ToolCrate</a>
+    <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+      <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+    </button>
+  </div>
+  <div class="sidebar-content">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <div class="sidebar-section-title">Navigation</div>
+      <a href="/" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">home</span>
+        Home
+      </a>
+      <a href="/tools" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+        Popular
+      </a>
+      <a href="/workflows" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">checklist</span>
+        Workflows
+      </a>
+      <a href="/blog" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+        Blog
+      </a>
+      <a href="/about" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">info</span>
+        About
+      </a>
+      <a href="/contact" class="sidebar-link">
+        <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+        Contact
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section-title">Categories</div>
+
+      <a href="/tools" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F8FAFC;flex-shrink:0;"></span>
+        All Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">122</span>
+      </a>
+      <a href="/tools?cat=image" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#60A5FA;flex-shrink:0;"></span>
+        Image Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">23</span>
+      </a>
+      <a href="/tools?cat=dev" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#06B6D4;flex-shrink:0;"></span>
+        Dev Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">25</span>
+      </a>
+      <a href="/tools?cat=pdf" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB7185;flex-shrink:0;"></span>
+        PDF Utilities
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=text" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#EAB308;flex-shrink:0;"></span>
+        Text Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">20</span>
+      </a>
+      <a href="/tools?cat=calc" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0;"></span>
+        Calculators
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">13</span>
+      </a>
+      <a href="/tools?cat=productivity" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#FB923C;flex-shrink:0;"></span>
+        Productivity
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">3</span>
+      </a>
+      <a href="/tools?cat=qr" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#818CF8;flex-shrink:0;"></span>
+        QR Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">9</span>
+      </a>
+      <a href="/tools?cat=seo" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;"></span>
+        SEO Tools
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">7</span>
+      </a>
+      <a href="/tools?cat=personality" class="sidebar-sublink">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F472B6;flex-shrink:0;"></span>
+        Personality Tests
+        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">2</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="/privacy-policy" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">policy</span>
+        Privacy Policy
+      </a>
+      <a href="/terms" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">gavel</span>
+        Terms of Service
+      </a>
+      <a href="/disclaimer" class="sidebar-sublink">
+        <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+        Disclaimer
+      </a>
+    </nav>
+  </div>
+</aside>
+
+  <main class="main-content" id="main-content" tabindex="-1" data-workflow-slug="website-handoff-assets">
+    <nav class="breadcrumb-nav tool-breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 1.25rem;"><a href="/">Home</a><span class="breadcrumb-sep" aria-hidden="true">/</span><a href="/workflows">Workflows</a><span class="breadcrumb-sep" aria-hidden="true">/</span><span class="breadcrumb-current" aria-current="page">Website handoff package</span></nav>
+    <header class="workflow-hero">
+      <div>
+        <span class="workflow-eyebrow">Dev workflow · 4 checked steps</span>
+        <h1>Prepare a lean website handoff package</h1>
+        <p>Format working source files, create minified delivery assets, optimize images, and generate checksums for a reproducible website handoff.</p>
+      </div>
+      <div class="workflow-hero-meta">
+        <div class="workflow-meta-item"><small>Time needed</small><strong>About 15 minutes</strong></div>
+        <div class="workflow-meta-item"><small>Useful for</small><strong>Freelance developers, agencies, and teams shipping static websites</strong></div>
+      </div>
+    </header>
+    <section class="workflow-progress-panel" aria-label="Workflow progress">
+      <div class="workflow-progress-top"><strong id="workflow-progress-text">0 of 4 steps complete</strong><span class="workflow-save-status" id="workflow-save-status" role="status">Saved only on this device</span></div>
+      <div class="workflow-progress-track" role="progressbar" aria-label="Completed steps" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="workflow-progress-bar" id="workflow-progress-bar"></div></div>
+      <div class="workflow-progress-actions"><span class="workflow-save-status">Open each tool in a new tab, then mark the step done when the output is checked.</span><button class="workflow-reset" id="workflow-reset" type="button"><span class="material-symbols-outlined" aria-hidden="true">restart_alt</span>Reset progress</button></div>
+    </section>
+    <div class="workflow-intro"><p>A useful handoff contains readable source and optimized delivery files, not just a folder of ambiguously named exports. Keep both so the next developer can maintain the project without unminifying production assets.</p>
+<p>Minification should follow testing, not replace it. Source maps, build configuration, licensing notices, and cache-busting strategy still belong in the project even when these browser tools prepare individual assets.</p></div>
+
+    <section class="workflow-step-list" aria-label="Workflow steps">
+        <article class="workflow-step-card" id="step-1">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">1</span>
+            <h2>Normalize the readable source</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="0" aria-label="Mark step 1 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>Format CSS before reviewing it so inconsistent indentation does not hide accidental overrides. Commit or save this readable version as the maintenance source before producing a minified counterpart.</p>
+            <ul class="workflow-settings"><li>Resolve lint and browser issues first</li><li>Preserve required license comments</li></ul>
+            <a class="workflow-tool-link" href="/tools/css-beautifier" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Format CSS source<span class="sr-only"> using CSS Beautifier (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: CSS Beautifier · Format and indent CSS code for readability.</div>
+          </div>
+        </article>
+
+        <article class="workflow-step-card" id="step-2">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">2</span>
+            <h2>Create production CSS and JavaScript</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="1" aria-label="Mark step 2 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>Minify copies of the tested assets and compare behavior in the actual site. A smaller file is not a successful build if it removes something your runtime or third-party integration expects.</p>
+            <ul class="workflow-settings"><li>Keep source and output in separate directories</li><li>Test the minified output, not only the source</li></ul>
+            <a class="workflow-tool-link" href="/tools/css-minifier" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Minify delivery CSS<span class="sr-only"> using CSS Minifier (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: CSS Minifier · Minify CSS files to speed up page load times.</div>
+          </div>
+        </article>
+
+        <article class="workflow-step-card" id="step-3">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">3</span>
+            <h2>Optimize image assets</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="2" aria-label="Mark step 3 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>Resize images for their layout and compress the exports before packaging them. Avoid recompressing an already optimized asset every time you prepare a handoff.</p>
+            <ul class="workflow-settings"><li>Use descriptive, stable filenames</li><li>Check transparent images and icons visually</li></ul>
+            <a class="workflow-tool-link" href="/tools/image-compressor" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Optimize handoff images<span class="sr-only"> using Image Compressor (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: Image Compressor · Compress one image at a time in your browser with adjustable quality and a local before/after preview.</div>
+          </div>
+        </article>
+
+        <article class="workflow-step-card" id="step-4">
+          <div class="workflow-step-head">
+            <span class="workflow-step-number" aria-hidden="true">4</span>
+            <h2>Generate integrity checksums</h2>
+            <label class="workflow-check"><input type="checkbox" data-workflow-step="3" aria-label="Mark step 4 complete"><span>Done</span></label>
+          </div>
+          <div class="workflow-step-body">
+            <p>Create hashes for the final archive or key deliverables so the recipient can detect accidental changes or incomplete transfers. Record the algorithm and hash alongside the exact filename.</p>
+            <ul class="workflow-settings"><li>Hash the final file after all edits</li><li>A checksum detects changes; it does not prove who created the file</li></ul>
+            <a class="workflow-tool-link" href="/tools/hash-generator" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Hash final deliverables<span class="sr-only"> using Hash Generator (opens in a new tab)</span></a>
+            <div style="margin-top: 0.55rem; color: var(--text-muted); font-size: 0.78rem;">Tool: Hash Generator · Generate MD5, SHA-1, SHA-256, and SHA-512 hashes.</div>
+          </div>
+        </article></section>
+    <button class="workflow-share" type="button" data-share-workflow><span class="material-symbols-outlined" aria-hidden="true">share</span><span data-share-label>Share workflow</span></button>
+    <div class="workflow-two-col">
+      <section class="workflow-info-card"><h2>Mistakes to avoid</h2><div class="workflow-mistake"><strong>Keeping only minified code</strong><p>That makes future maintenance unnecessarily difficult. Deliver readable source, dependency instructions, and the exact production output.</p></div><div class="workflow-mistake"><strong>Assuming minification fixes performance</strong><p>Unused frameworks, oversized media, blocking requests, and poor caching can matter more. Measure the page after packaging.</p></div><div class="workflow-mistake"><strong>Treating hashes as signatures</strong><p>A plain checksum can be replaced along with the file. Use authenticated signing when provenance or tamper resistance is required.</p></div></section>
+      <section class="workflow-info-card"><h2>Frequently asked questions</h2><div class="tool-faq-list"><details class="tool-faq-item"><summary class="tool-faq-question"><span>Should I minify HTML, CSS, and JavaScript manually?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">For a small static handoff it can be useful. Ongoing projects are usually safer with a reproducible build pipeline that also handles source maps, hashing, and tests.</p></details>
+<details class="tool-faq-item"><summary class="tool-faq-question"><span>What belongs in a complete handoff?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">Readable source, production assets, setup instructions, dependency and license information, environment-variable examples without secrets, deployment notes, and a verified archive.</p></details>
+<details class="tool-faq-item"><summary class="tool-faq-question"><span>Why include a checksum?</span><span class="material-symbols-outlined tool-faq-icon" aria-hidden="true">add</span></summary><p class="tool-faq-answer">It lets the recipient verify that a specific file matches the delivered bytes. It is useful for transfer verification, but it is not a replacement for signed releases.</p></details></div></section>
+    </div>
+    <section class="workflow-related-section"><div class="section-header"><h2>Related workflows</h2><a class="section-link" href="/workflows">View all</a></div><div class="workflow-home-grid">
+    <a class="workflow-card" href="/workflows/debug-json-api-response" data-workflow-card="debug-json-api-response" data-category="Dev" data-step-count="4">
+      <span class="workflow-card-icon" aria-hidden="true"><span class="material-symbols-outlined">data_object</span></span>
+      <span class="workflow-card-category">Dev workflow</span>
+      <h3>JSON API debugging</h3>
+      <p>Isolate malformed JSON, locate syntax errors, inspect token claims safely, and turn nested response data into a reviewable CSV.</p>
+      <span class="workflow-card-footer"><span>4 steps · About 10 minutes</span><span class="workflow-card-progress" data-card-progress>Open workflow →</span></span>
+    </a>
+
+    <a class="workflow-card" href="/workflows/optimize-product-images-for-web" data-workflow-card="optimize-product-images-for-web" data-category="Image" data-step-count="4">
+      <span class="workflow-card-icon" aria-hidden="true"><span class="material-symbols-outlined">imagesmode</span></span>
+      <span class="workflow-card-category">Image workflow</span>
+      <h3>Product image pipeline</h3>
+      <p>A practical image pipeline for store listings: consistent crops, correct display dimensions, modern formats, compression, and metadata cleanup.</p>
+      <span class="workflow-card-footer"><span>4 steps · About 12 minutes per image set</span><span class="workflow-card-progress" data-card-progress>Open workflow →</span></span>
+    </a>
+  </div></section>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-features-row">
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #8B5CF6;">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <div class="feature-title">Free Core Tools</div>
+        <div class="feature-sub">No fee for core tool use.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #06B6D4;">
+          <span class="material-symbols-outlined">shield_lock</span>
+        </div>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-sub">Files stay on your device.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #F43F5E;">
+          <span class="material-symbols-outlined">no_accounts</span>
+        </div>
+        <div class="feature-title">No Registration</div>
+        <div class="feature-sub">Start using instantly.</div>
+      </div>
+      <div class="footer-feature-item">
+        <div class="feature-icon" style="color: #EAB308;">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <div class="feature-title">Lightning Fast</div>
+        <div class="feature-sub">Client-side processing.</div>
+      </div>
+    </div>
+
+    <div class="footer-line-divider"></div>
+
+    <div class="footer-main-row">
+      <div class="footer-brand-side">
+        <h3 class="footer-brand-name">100ToolCrate</h3>
+        <p class="footer-brand-desc">
+          Precision built utilities for the modern web.<br>
+          Free core tools. Local-first processing.
+        </p>
+        <div class="footer-brand-copyright">
+          © 2026 100ToolCrate.
+        </div>
+      </div>
+
+      <div class="footer-columns-side">
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">NAVIGATION</span>
+          <a href="/">Home</a>
+          <a href="/tools">All Tools</a>
+          <a href="/workflows">Workflows</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/advertise">Advertise</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">FOR BUILDERS</span>
+          <a href="/agents">AI agent API & MCP</a>
+          <a href="/services">Done-for-you services</a>
+          <a href="/advertise">Sponsorships</a>
+          <a href="/editorial-policy">Editorial policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-col-heading">PLATFORM</span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <button type="button" class="pwa-install-link" data-ad-choices>
+            <span class="material-symbols-outlined" aria-hidden="true">ad_group</span>
+            Ad choices
+          </button>
+          <button type="button" class="pwa-install-link" data-pwa-install>
+            <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+            Install app
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js?v=2026-11-10-v88-agent-growth" defer></script>
+
+  <script src="/assets/js/workflows.js?v=2026-11-10-v88-agent-growth" defer></script>
+</body>
+</html>

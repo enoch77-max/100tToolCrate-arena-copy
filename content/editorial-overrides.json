@@ -1,0 +1,70 @@
+{
+  "image-compressor": {
+    "seoTitle": "Compress JPG, PNG or WebP Images Locally | 100ToolCrate",
+    "seoDesc": "Compress one JPG, PNG or WebP image in your browser. Adjust quality, compare original and output sizes, preview the result and download it locally.",
+    "desc": "Compress one image at a time in your browser with adjustable quality and a local before/after preview.",
+    "content": "<h2>Compress an image with a visible quality–size trade-off</h2><p>Select a JPG, PNG or WebP image, choose a quality level, and run the compressor. The current workspace processes one selected image at a time. It shows source and output information so you can decide whether the saving is worth the visual change.</p><h2>How to get a useful result</h2><ol><li>Select the source image and wait for the local preview.</li><li>Start with a moderate quality setting rather than the minimum.</li><li>Compress once, inspect text, edges, transparency and gradients, then download the result.</li></ol><p>JPG and WebP compression is normally lossy. PNG behavior depends on the browser encoder and selected settings. Do not repeatedly compress the output when you can return to the original; multiple lossy passes can reduce quality.</p><h2>What the byte count does not tell you</h2><p>A smaller file is not automatically better. Already optimized files may shrink very little, and aggressive compression can smear labels or create halos. Keep the original and judge the downloaded output at the size visitors will actually see.</p>"
+  },
+  "pdf-merger": {
+    "seoTitle": "Merge PDF Files in Your Browser | 100ToolCrate",
+    "seoDesc": "Select multiple PDFs, review the merge queue, combine them locally and download the result. Check page order and interactive features before sharing.",
+    "desc": "Combine selected PDF files into one document in your browser, with a visible merge queue and no account required.",
+    "content": "<h2>Combine PDFs in the order you add them</h2><p>Select one or more valid, non-empty PDF files. The workspace displays a merge queue and lets you remove mistaken selections. Add files in the reading order you want, then run the merge and download the generated document.</p><h2>Review the output before replacing your sources</h2><p>Check page count, orientation, dimensions, annotations, forms and links. Browser-side PDF libraries cannot support every encrypted, damaged or highly specialized PDF feature. Keep each original document until you have opened and reviewed the merged file.</p><p>The tool does not promise to normalize every document to A4 or preserve every interactive feature. For a prepared email attachment, continue with the <a href=\"/workflows/prepare-pdf-for-email\">email-ready PDF workflow</a>.</p>"
+  },
+  "pdf-compressor": {
+    "seoTitle": "Compress a PDF Locally and Inspect the Result | 100ToolCrate",
+    "seoDesc": "Reduce a PDF's size in your browser and compare the downloaded result. Learn why scanned pages, existing compression and image quality affect savings.",
+    "desc": "Reduce PDF file size locally, then inspect text, signatures, images and page integrity before sharing the output.",
+    "content": "<h2>Compress after finishing document edits</h2><p>Merge, reorder, rotate or extract pages first, then compress the finished document once. This avoids repeatedly degrading page images and gives you a clear original for comparison.</p><h2>Why savings vary</h2><p>Documents dominated by large images may offer more opportunity for reduction than files that are already optimized. Some PDFs can shrink very little. Output size and visual quality depend on the source and the browser-side processing method; there is no universal compression ratio.</p><h2>Quality checks that matter</h2><ul><li>Inspect small text, stamps, signatures and QR codes at 100% zoom.</li><li>Confirm that every expected page opens and remains readable.</li><li>Keep the original until the recipient or upload portal accepts the result.</li></ul>"
+  },
+  "short-link": {
+    "title": "Clean Link Display",
+    "seoTitle": "Clean Link Display: Format a Readable URL | 100ToolCrate",
+    "seoDesc": "Turn a valid HTTP or HTTPS URL into a clean, readable display link. This tool does not create a short redirect or use an external shortening service.",
+    "desc": "Format a readable link label from a valid URL without creating a redirect or sending it to a shortening service.",
+    "content": "<h2>Make a URL easier to read—not shorter</h2><p>Enter an absolute HTTP or HTTPS URL. The tool validates it, displays the hostname and path without the scheme, and keeps the full destination in the resulting link. It does not shorten the destination, create a redirect, or call a third-party shortening service.</p><h2>When this is useful</h2><p>Use the clean display when presenting a link in a document or interface where a shorter visual label improves readability. Copy the actual destination only after checking that it is correct. For measurement campaigns, add UTM parameters first with the <a href=\"/tools/utm-builder\">UTM builder</a>.</p><h2>Need an actual short URL?</h2><p>Use a reputable shortening provider you control, and review its privacy, availability, redirect and abuse policies. Do not represent this display formatter as a public short-link service.</p>"
+  },
+  "passport-photo-maker": {
+    "title": "2×2 Passport Photo Cropper",
+    "seoTitle": "2×2 Passport Photo Cropper: 600×600 JPEG | 100ToolCrate",
+    "seoDesc": "Center-crop an image into a 600×600 square JPEG for a 2×2-inch at 300 DPI requirement. This does not certify passport acceptance or other country formats.",
+    "desc": "Create a centered 600×600 square JPEG for applications that specifically request a 2×2-inch photo at 300 DPI.",
+    "content": "<h2>A single, explicit output preset</h2><p>This tool center-crops the largest square from your source and exports a 600×600-pixel JPEG on a white canvas. That corresponds to 2×2 inches at 300 DPI. It does not currently provide presets for every country or document type.</p><h2>Before using the result</h2><p>Confirm that your issuing authority asks for this exact size and permits the crop. Center cropping may remove too much of the head, shoulders or background; use the general image cropper when you need to choose a different region.</p><p>Official acceptance also depends on recency, pose, lighting, expression, head proportions, background and alteration rules. A correctly sized export is not a compliance certificate.</p>"
+  },
+  "image-to-url": {
+    "seoTitle": "Image to Data URL or Temporary Blob URL | 100ToolCrate",
+    "seoDesc": "Create a temporary browser blob URL or a Base64 data URL from an image locally. Learn where each URL works and why a blob URL is not public hosting.",
+    "desc": "Generate local blob and data URLs for development and embedding; no image hosting or public share link is created.",
+    "content": "<h2>Two different kinds of local URL</h2><p>A <strong>blob URL</strong> refers to data in the current browser context. It is useful for previews and local development, but it is not a public URL that another person or server can open later.</p><p>A <strong>data URL</strong> embeds the encoded image in the URL string itself. You can copy it into compatible CSS, HTML or development tools, but recipients and platforms may block data URLs or impose length limits. Larger images create larger strings.</p><h2>When you need public sharing</h2><p>Upload the image to a hosting service or your own website and use its HTTPS URL. This tool does not upload or host the image, and it must not be described as a public image-sharing service.</p>"
+  },
+  "jpg-to-png": {
+    "seoTitle": "Convert JPG to PNG in Your Browser | 100ToolCrate",
+    "seoDesc": "Convert a JPEG image to PNG locally. Conversion preserves supported visible pixels but cannot recover transparency that JPEG never stored.",
+    "desc": "Convert JPG to PNG locally for workflows that need PNG output; conversion does not create transparency or restore lost detail.",
+    "content": "<h2>Change the container, not the original capture</h2><p>JPEG stores no alpha transparency and usually uses lossy compression. Converting to PNG gives you a PNG file supported by the browser encoder, but it cannot recover transparent regions or detail removed by earlier JPEG compression.</p><h2>How to convert</h2><ol><li>Select a JPG or JPEG image and wait for the local preview.</li><li>Run the conversion and inspect the resulting PNG.</li><li>Download the output only after checking its visible pixels and dimensions.</li></ol><p>Use PNG when a target workflow requires it or when you plan subsequent edits without another JPEG encoding pass. If you need a transparent background, use a dedicated background-editing workflow and review its edges manually.</p>"
+  },
+  "og-previewer": {
+    "seoTitle": "Open Graph Preview With Safe Server Fetching | 100ToolCrate",
+    "seoDesc": "Fetch public Open Graph metadata through a size-limited, private-network-blocking server preview. Confirm final shares with platform debuggers.",
+    "desc": "Inspect social metadata through a bounded server fetcher, with explicit network, privacy and platform-rendering limitations.",
+    "content": "<h2>Preview public social metadata</h2><p>Enter a public URL. Our server resolves only public network addresses, follows a small number of validated redirects, limits response time and HTML size, then returns the title, description and image metadata used for approximate social-card previews.</p><h2>Privacy and fetch limitations</h2><p>The URL is sent to our metadata endpoint and then requested from the destination site. HTML is handled transiently; only extracted metadata is returned. Authentication pages, bot protection, timeouts, invalid responses and unsupported content can prevent a preview. Private and local-network destinations are blocked.</p><p>A successful preview is still an approximation. After deploying your own page, validate its public canonical URL with the relevant platform debugger and inspect image cropping on real shares.</p>"
+  },
+  "pdf-lock": {
+    "seoTitle": "Password-Protect a PDF Locally: Compatibility Notes | 100ToolCrate",
+    "seoDesc": "Encrypt a PDF with a password in your browser. Test the downloaded file in the recipient's viewer; forgotten passwords cannot be recovered here.",
+    "desc": "Add password-based PDF encryption locally, then verify viewer compatibility and store the password through a separate secure channel.",
+    "content": "<h2>Encrypt a copy and test the recipient workflow</h2><p>Select a supported PDF, choose a strong unique password, and create an encrypted copy. The original file should remain unchanged. Keep a separate record of the password and send it through a different channel from the document.</p><h2>Compatibility is part of the test</h2><p>PDF viewers and automated application systems vary in encryption support. Open the downloaded output in the viewer your recipient will use and confirm that printing, forms or text extraction behave as intended. Unexpected encryption can stop portals from reading an application.</p><p>There is no account recovery or password-reset service. A forgotten password may make the encrypted copy permanently inaccessible.</p>"
+  },
+  "llm-token-counter": {
+    "seoTitle": "LLM Token & Cost Estimator: Model Assumptions Explained",
+    "seoDesc": "Estimate prompt tokens and cost with visible assumptions. Exact billing requires the model's tokenizer, current provider pricing and all request overhead.",
+    "desc": "Estimate text token usage and cost for planning; verify exact billing with the target model tokenizer and current provider pricing.",
+    "content": "<h2>Use estimates for planning, not invoices</h2><p>Enter prompt text and review the selected assumptions. Tokenization differs between model families and versions, so a generic estimate can differ from an API response or provider bill.</p><h2>What can change the total</h2><ul><li>System and developer instructions not included in the pasted text</li><li>Tool definitions, conversation history and response tokens</li><li>Images, audio, attachments and provider-specific preprocessing</li><li>Cached-input pricing, batch pricing and pricing changes</li></ul><p>For exact accounting, use the target provider's tokenizer or usage response and its current price table. Do not present the estimate as a guaranteed charge.</p>"
+  },
+  "pdf-counter": {
+    "seoTitle": "PDF Page Counter With Parse-Error Handling | 100ToolCrate",
+    "seoDesc": "Count pages in a supported PDF locally. Encrypted, damaged or unusual files can fail; a page count is not full PDF validation.",
+    "desc": "Read the page count from a supported PDF in your browser and get a clear error when the document cannot be parsed.",
+    "content": "<h2>Read the page tree locally</h2><p>Select a PDF and let the browser-side library parse it. When parsing succeeds, the workspace reports the number of pages without sending the document to our server.</p><h2>What a successful count means</h2><p>The count describes the document as understood by the parser. It does not certify that every page renders correctly, every attachment is safe, or every interactive feature is intact.</p><p>Encrypted, corrupted or unusual files can fail to parse. Use a dedicated PDF viewer or repair workflow when that happens rather than treating a failed read as a zero-page document.</p>"
+  }
+}

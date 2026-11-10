@@ -1,0 +1,6 @@
+{
+  "name": "100ToolCrate",
+  "description": "100 Free Online Tools in One Place. Private, fast, and browser-based utility tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

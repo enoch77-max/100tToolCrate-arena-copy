@@ -1,0 +1,29 @@
+# 100ToolCrate
+
+> Free browser utilities and a real public execution API for deterministic text, JSON, time and calculator tasks. Agent integration and other manually delivered services are available but never required for tool use.
+
+## Start here for agents
+
+- [Agent integration guide](https://100toolcrate.com/agents): REST/MCP quick start, limitations and live playground.
+- [Executable tool catalog](https://100toolcrate.com/api/v1/tools): 18 tools with descriptions, JSON input/output schemas, execution URLs and browser-only exclusions.
+- [OpenAPI specification](https://100toolcrate.com/api/openapi.json): public operational and execution endpoints.
+- [MCP server card](https://100toolcrate.com/.well-known/mcp/server-card.json): Streamable HTTP endpoint at https://100toolcrate.com/api/mcp; initialize, ping, tools/list and tools/call.
+- [Authentication/data policy](https://100toolcrate.com/auth.md): no public execution token, transient inputs, size/rate limits and prohibited sensitive data.
+
+## Execution contract
+
+Call `POST /api/v1/tools/{toolId}/execute` with the published input schema, or use MCP `tools/call`. Do not claim success from a documentation page alone; inspect the HTTP or JSON-RPC result. Execution inputs are processed transiently and not persisted by that endpoint. Never send secrets or unnecessary personal data.
+
+Browser-only image, PDF, canvas, camera and interactive tools are listed separately in the catalog. They are not server-executable. A blob URL is not public hosting; JWT decoding is not signature verification; Base64 is not encryption; generated crawler directives are not access control.
+
+## Useful human resources
+
+- [All tools](https://100toolcrate.com/tools): complete browser-tool directory.
+- [Workflows](https://100toolcrate.com/workflows): ordered, checked task guides.
+- [Editorial and testing policy](https://100toolcrate.com/editorial-policy): accuracy, lifecycle, comparison, privacy and monetization rules.
+- [Services](https://100toolcrate.com/services): scoped agent integration, technical SEO, image optimization and data cleanup.
+- [Contact](https://100toolcrate.com/contact): bug reports and corrections.
+
+## Indexing and content permissions
+
+Search indexing and AI input/grounding are permitted by the site's Content-Signal declaration. AI training is declined. Crawlers and agents remain responsible for their own policies. Generated robots/llms.txt files are conventions, not security controls.
